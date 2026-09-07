@@ -33,7 +33,10 @@ import aboutHeader from "../src/assets/about/about_hero.svg";
 import aboutProduct1 from "../src/assets/about/about_product_1.svg";
 import aboutProduct2 from "../src/assets/about/about_product_2.svg";
 
+import contactHero from "../src/assets/contact/contact_hero.svg";
+
 export {
+  contactHero,
   aboutHeader,
   aboutProduct1,
   aboutProduct2,
