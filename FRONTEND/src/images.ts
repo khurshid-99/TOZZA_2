@@ -29,7 +29,14 @@ import like from "../src/assets/like-icon.svg";
 import disLike from "../src/assets/dislike-icon.svg";
 import dowArrow from "../src/assets/down-arrow.svg";
 
+import aboutHeader from "../src/assets/about/about_hero.svg";
+import aboutProduct1 from "../src/assets/about/about_product_1.svg";
+import aboutProduct2 from "../src/assets/about/about_product_2.svg";
+
 export {
+  aboutHeader,
+  aboutProduct1,
+  aboutProduct2,
   dowArrow,
   like,
   disLike,

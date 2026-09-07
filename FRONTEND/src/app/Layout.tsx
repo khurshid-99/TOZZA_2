@@ -7,6 +7,7 @@ const Layout = () => {
         <Link to={"/"}>Home</Link>
         <Link to={"/product"}>Product</Link>
         <Link to={"/product/detils"}>Product Detils</Link>
+        <Link to={"/about"}>About</Link>
       </nav>
       <Outlet />
     </>

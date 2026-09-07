@@ -30,9 +30,11 @@ const InstagramFeed = () => {
         </p>
       </div>
 
-      <div className="flex flex-1 flex-wrap gap-2 sm:gap-4  md:gap-7.5 justify-center pb-pad-124 ">
+      <div className="w-347.5 mx-auto flex flex-1 flex-wrap gap-2 sm:gap-4  md:gap-7.5 justify-center pb-pad-124 ">
         {instagramFeed.length > 0 ? (
-          instagramFeed.map(({ image }) => <InstagramFeedCart image={image} />)
+          instagramFeed
+            .slice(0, 4)
+            .map(({ image }) => <InstagramFeedCart image={image} />)
         ) : (
           <h1>Loading</h1>
         )}
