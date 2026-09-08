@@ -34,8 +34,16 @@ import aboutProduct1 from "../src/assets/about/about_product_1.svg";
 import aboutProduct2 from "../src/assets/about/about_product_2.svg";
 
 import contactHero from "../src/assets/contact/contact_hero.svg";
+import googleIcon from "../src/assets/google-icon.svg";
+import facebookIcon from "../src/assets/facebook-3.svg";
+import colorLogo from "../src/assets/logo-for-website.png";
+import loginImg from "../src/assets/login-img.svg";
 
 export {
+  loginImg,
+  colorLogo,
+  googleIcon,
+  facebookIcon,
   contactHero,
   aboutHeader,
   aboutProduct1,
