@@ -1,11 +1,5 @@
 import { NavLink } from "react-router";
-import {
-  colorLogo,
-  contactHero,
-  facebookIcon,
-  googleIcon,
-  loginImg,
-} from "../../../images";
+import { colorLogo, facebookIcon, googleIcon, loginImg } from "../../../images";
 
 const Login = () => {
   return (
@@ -33,8 +27,8 @@ const Login = () => {
             alt=""
             className="w-[177.5px]  aspect-177.5/40.7 object-cover object-center "
           />
-          <div className="w-full h-full pt-10 pl-82.75 ">
-            <div className="flex gap-2">
+          <div className="w-full h-full pt-10 flex flex-col items-center ">
+            <div className="w-165.5 flex gap-2">
               <NavLink
                 to={"/login"}
                 className={({ isActive }) =>
@@ -100,18 +94,22 @@ const Login = () => {
                 Forgot password?
               </button>
             </form>
-          </div>
-        </div>
 
-        <div className="pt-8 flex flex-col items-center gap-5 ">
-          <h2 className="text-30 text-[#616161] ">More Option</h2>
-          <div className="flex gap-7.5 ">
-            <img
-              src={facebookIcon}
-              alt=""
-              className="w-15.25 aspect-square  "
-            />
-            <img src={googleIcon} alt="" className="w-15.25 aspect-square  " />
+            <div className="pt-12 ">
+              <h2 className="text-30 text-[#616161] ">More Option</h2>
+              <div className="flex gap-7.5 pt-4 ">
+                <img
+                  src={facebookIcon}
+                  alt=""
+                  className="w-15.25 aspect-square  "
+                />
+                <img
+                  src={googleIcon}
+                  alt=""
+                  className="w-15.25 aspect-square  "
+                />
+              </div>
+            </div>
           </div>
         </div>
       </aside>

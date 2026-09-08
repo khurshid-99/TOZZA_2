@@ -10,7 +10,7 @@ const SignUp = () => {
           alt=""
           className="w-full h-full object-center object-cover "
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-[#000000bd] to-[#0000005e] px-19 pb-33 flex flex-col justify-end ">
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-[#000000bd] to-[#0000005e] px-19 pb-[130px] flex flex-col justify-end ">
           <h2 className="text-30 text-white-text font-n-b ">Ready to Cook</h2>
           <h1 className="text-52 text-white-text font-n-eb">
             Cooking made <span className="text-[#FFE849] ">Easy</span>
@@ -27,8 +27,8 @@ const SignUp = () => {
             alt=""
             className="w-[177.5px]  aspect-177.5/40.7 object-cover object-center "
           />
-          <div className="w-full h-full pt-10 pl-82.75 ">
-            <div className="flex gap-2">
+          <div className="w-full h-full pt-10 flex flex-col items-center">
+            <div className="w-165.5 flex gap-2">
               <NavLink
                 to={"/login"}
                 className={({ isActive }) =>
@@ -85,18 +85,21 @@ const SignUp = () => {
                 Login
               </button>
             </form>
-          </div>
-        </div>
-
-        <div className="pt-8 flex flex-col items-center gap-5 ">
-          <h2 className="text-30 text-[#616161] ">More Option</h2>
-          <div className="flex gap-7.5 ">
-            <img
-              src={facebookIcon}
-              alt=""
-              className="w-15.25 aspect-square  "
-            />
-            <img src={googleIcon} alt="" className="w-15.25 aspect-square  " />
+            <div className="pt-12">
+              <h2 className="text-30 text-[#616161] ">More Option</h2>
+              <div className="flex gap-7.5 pt-4 ">
+                <img
+                  src={facebookIcon}
+                  alt=""
+                  className="w-15.25 aspect-square  "
+                />
+                <img
+                  src={googleIcon}
+                  alt=""
+                  className="w-15.25 aspect-square  "
+                />
+              </div>
+            </div>
           </div>
         </div>
       </aside>
