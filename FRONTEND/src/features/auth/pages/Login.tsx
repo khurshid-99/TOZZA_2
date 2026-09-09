@@ -10,7 +10,7 @@ const Login = () => {
           alt=""
           className="w-full h-full object-center object-cover "
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-[#000000bd] to-[#0000005e] px-19 pb-[130px] flex flex-col justify-end ">
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-[#000000bd] to-[#0000005e] px-19 pb-32.5 flex flex-col justify-end ">
           <h2 className="text-30 text-white-text font-n-b ">Ready to Cook</h2>
           <h1 className="text-52 text-white-text font-n-eb">
             Cooking made <span className="text-[#FFE849] ">Easy</span>
