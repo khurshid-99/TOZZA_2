@@ -121,7 +121,7 @@ const Home = () => {
           </p>
         </div>
         {/*  */}
-        <div className=" max-w-[1390px] mx-auto pt-[75px] ">
+        <div className=" max-w-347.5 mx-auto pt-18.75 ">
           <Swiper
             navigation={true}
             slidesPerView={1}

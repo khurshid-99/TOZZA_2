@@ -6,29 +6,29 @@ import Footer from "../../../utils/Footer";
 const Contact = () => {
   return (
     <section>
-      <header className="relative w-full xl:aspect-1920/506 ">
+      <header className="relative w-full aspect-400/220 md:aspect-768/300 xl:aspect-1920/506 ">
         <img
           src={contactHero}
           alt=""
-          className="w-full object-cover object-center "
+          className="w-full aspect-400/220 md:aspect-768/300 object-cover object-center "
         />
 
         <div className="absolute top-0 left-0 w-full h-full ">
-          <div className="w-[1620px] h-full mx-auto flex flex-col justify-center gap-10  ">
-            <h1 className="text-68 text-main font-n-eb ">
-              About Us <span>.</span>
+          <div className="w-[1620px] h-full mx-auto flex flex-col justify-center gap-4 xl:gap-10  ">
+            <h1 className="text-30 lg:text-48 2xl:text-68 text-main font-n-eb ">
+              Contact with Us.
             </h1>
-            <p className="text-28 text-[#2E2F30] font-n-l ">
+            <p className="text-18 lg:text-28 text-[#2E2F30] font-n-l ">
               Lorem Ipsum is simply dummy text of the printing <br /> and
               typesetting industry.
             </p>
-            <button className="w-63.5 aspect-254/76 rounded-[50px] bg-[#1B3181] text-28 text-white-text font-n-r  ">
+            <button className="w-fit rounded-[50px] bg-[#1B3181] text-18 xl:text-28 text-white-text font-n-r px-8 py-3 lg:px-12 lg:py-5 xl:px-14.25 xl:py-4.25 ">
               Get Started
             </button>
           </div>
         </div>
       </header>
-      <div className="px-0 3xl:px-pad-4xl flex items-center gap-3 py-5 bg-base ">
+      <div className="px-0 3xl:px-pad-4xl flex items-center gap-3 py-4 md:py-5 bg-base ">
         <NavLink to={"/"} className="text-20 ">
           Home
         </NavLink>
@@ -42,54 +42,57 @@ const Contact = () => {
           Contact
         </NavLink>
       </div>
-      <div className="w-[1620px] mx-auto pt-14.25 pb-36.75 ">
+
+      <div className="3xl:w-[1620px] 3xl:mx-auto pt-14.25 pb-36.75 ">
         <div className="flex flex-col items-center pb-23  ">
           <img
             src={brandIcon}
             alt=""
             className="w-10.25 aspect-41/29 object-cover object-center "
           />
-          <h1 className="text-42 text-main font-n-b ">Contact With Us</h1>
-          <p className="w-216 text-24 text-secondary text-center pt-10 ">
+          <h1 className="text-30 lg:text-42 text-main font-n-b ">
+            Contact With Us
+          </h1>
+          <p className="lg:w-216 text-20 md:text-24 text-secondary text-center pt-10 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever.
           </p>
         </div>
-        <div className="w-361.75 mx-auto flex overflow-hidden rounded-3xl shadow-[0_0_100px_rgba(0,0,0,0.10)]">
-          <div className="w-230.5 aspect-922/712  bg-white py-pad-65 pl-pad-65 pr-14.25 ">
-            <h1 className="text-30 text-main  font-n-sb ">Drop Your Message</h1>
-            <form action="" className="flex flex-col pt-pad-2xl-plus gap-6.25">
-              <div className="flex justify-between ">
+        <div className="w-full 2xl:w-361.75 mx-auto flex flex-wrap lg:flex-nowrap lg:flex-row  px-4 py-4 lg:p-0 shadow-[0_0_100px_rgba(0,0,0,0.10)]  gap-2 lg:gap-0 rounded-[20px] overflow-hidden   ">
+          <div className="w-full lg:w-1/2 xl:w-230.5 lg:aspect-922/712 bg-white  md:p-4 xl:p-10 2xl:pl-17 2xl:pr-13  2xl:py-pad-65 3xl:pl-pad-65 3xl:pr-14.25 rounded-t-[15px] lg:rounded-none ">
+            <h1 className="text-30 text-main font-n-sb ">Drop Your Message</h1>
+            <form action="" className="flex flex-col pt-pad-2xl-plus gap-6.25 ">
+              <div className="flex justify-between flex-wrap  gap-4.5 3xl:gap-0 ">
                 <input
                   type="text"
                   name=""
                   id=""
                   placeholder="First Name"
-                  className="w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-6 bg-[#F5F5F5] "
+                  className="w-full  2xl:w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-4.5 bg-[#F5F5F5] "
                 />
                 <input
                   type="text"
                   name=""
                   id=""
                   placeholder="Last Name"
-                  className="w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-6 bg-[#F5F5F5] "
+                  className="w-full 2xl:w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-4.5 bg-[#F5F5F5] "
                 />
               </div>
-              <div className="flex justify-between ">
+              <div className="flex justify-between flex-wrap  gap-4.5  3xl:gap-0 ">
                 <input
-                  type="text"
+                  type="email"
                   name=""
                   id=""
                   placeholder="Email ID"
-                  className="w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-6 bg-[#F5F5F5] "
+                  className="w-full 2xl:w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-4.5 bg-[#F5F5F5] "
                 />
                 <input
                   type="text"
                   name=""
                   id=""
                   placeholder="Phone Number"
-                  className="w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-6 bg-[#F5F5F5] "
+                  className="w-full 2xl:w-98 text-18 text-main outline-none border border-[#E5E5E5] rounded-[50px] px-11 py-4.5 bg-[#F5F5F5] "
                 />
               </div>
               <textarea
@@ -97,26 +100,27 @@ const Contact = () => {
                 id=""
                 maxLength={100}
                 placeholder="Message"
-                className="w-full aspect-801/187 outline-none border border-[#E5E5E5] rounded-4xl px-11 py-6 bg-[#F5F5F5] text-18 text-main resize-none "
+                className="w-full 2xl:w-200.25 aspect-400/250 xl:aspect-801/187 2xl:aspect-801/178 outline-none border border-[#E5E5E5] rounded-4xl px-11 py-6 bg-[#F5F5F5] text-18 text-main resize-none "
               />
-              <button className="w-fit px-[90.6px] py-5 text-24 text-white-text bg-warning-bg rounded-[50px] mt-18 ">
+              <button className="w-full xl:w-fit rounded-[50px] text-18 xl:text-28 text-white-text font-n-r px-12.5 py-3 lg:px-12 lg:py-5 xl:px-21 xl:py-4.25 2xl:mt-10.5 bg-warning-bg">
                 Submit
               </button>
             </form>
           </div>
-          <div className="w-131.25 aspect-525/712 bg-primary-dark py-pad-65 px-19.75 ">
+
+          <div className="w-full lg:w-1/2 xl:w-131.25 lg:aspect-525/712 bg-primary-dark py-10 md:py-pad-65 px-4 md:px-19.75 rounded-b-[15px] lg:rounded-none ">
             <h1 className="text-42 text-white-text font-n-sb ">Reach Us</h1>
-            <h4 className="text-20 text-[#FFE849] font-medium pt-12 pb-1.25 ">
+            <h4 className="text-20 text-[#FFE849] font-medium pt-10 pb-1.25 ">
               Address
             </h4>
             <p className="text-20 text-[#95A1CC]  ">
               Degana Chitta basu market 99, <br /> North 24 Parganas, 743 423.
             </p>
-            <h4 className="text-20 text-[#FFE849] font-medium pt-7.5 pb-1.25 ">
+            <h4 className="text-20 text-[#FFE849] font-medium pt-7 pb-1.25 ">
               Phone Number:
             </h4>
             <p className="text-20 text-[#95A1CC]  ">9735 504 154</p>
-            <h4 className="text-20 text-[#FFE849] font-medium pt-10 pb-1.25">
+            <h4 className="text-20 text-[#FFE849] font-medium pt-9 pb-1.25">
               Email Us
             </h4>
             <p className="text-20 text-[#95A1CC]  ">arifinindian@gmail.com</p>
@@ -125,7 +129,7 @@ const Contact = () => {
             </h4>
             <p className="text-20 text-[#95A1CC]  ">403-5685-6575</p>
 
-            <div className="flex items-center gap-2 pt-[75px] ">
+            <div className="flex items-center gap-2 pt-[50px] ">
               <h4 className="text-18 text-[#FFE849] ">Follow Us :</h4>
 
               <svg
