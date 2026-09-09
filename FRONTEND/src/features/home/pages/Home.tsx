@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <section className="home  ">
-      <div className="flex items-center justify-center gap-[65px] py-[30px] ">
+      <div className="flex items-center justify-center gap-8 lg:gap-10 3xl:gap-pad-65 py-7.5 ">
         {[
           { id: 1, name: "Today’s Deals", icon: headerCategoryIcon },
           { id: 2, name: "Chicken", icon: headerCategoryIcon },
@@ -40,11 +40,31 @@ const Home = () => {
           { id: 7, name: "Vegetables", icon: headerCategoryIcon },
           { id: 8, name: "Chicken", icon: headerCategoryIcon },
           { id: 9, name: "Fish & Seafood", icon: headerCategoryIcon },
-        ].map(({ id, name, icon }) => (
-          <CategoryNav name={name} icon={icon} />
-        ))}
+        ].map(({ id, name, icon }, index) => {
+          let visibilityClass = "hidden";
 
-      <button className="w-[94.5px] aspect-square rounded-full border border-soft text-main text-20 font-n-sb capitalize shadow-[10px_10px_50px_rgba(0,0,0,0.2)] ">more</button>
+          if (index < 3) {
+            visibilityClass = "flex"; // Shown on mobile and up
+          } else if (index < 5) {
+            visibilityClass = "hidden md:flex"; // Shown from tablet up
+          } else if (index < 6) {
+            visibilityClass = "hidden lg:flex"; // Shown from laptop up
+          } else if (index < 7) {
+            visibilityClass = "hidden 2xl:flex";
+          } else {
+            visibilityClass = "hidden xl:flex"; // Shown on desktop only
+          }
+
+          return (
+            <div key={id} className={visibilityClass}>
+              <CategoryNav name={name} icon={icon} />
+            </div>
+          );
+        })}
+
+        <button className="w-15 xl:w-[94.5px] aspect-square rounded-full border border-soft text-main text-14 xl:text-20 font-n-sb capitalize shadow-[10px_10px_50px_rgba(0,0,0,0.2)] ">
+          more
+        </button>
       </div>
       {/*  */}
       <div className="w-full aspect-400/270 md:aspect-768/300 xl:aspect-1920/750 2xl:aspect-1536/696 3xl:aspect-1920/696  relative  ">

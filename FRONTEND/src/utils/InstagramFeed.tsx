@@ -34,7 +34,7 @@ const InstagramFeed = () => {
         {instagramFeed.length > 0 ? (
           instagramFeed
             .slice(0, 4)
-            .map(({ image }) => <InstagramFeedCart image={image} />)
+            .map(({ image, id }) => <InstagramFeedCart key={id} image={image} />)
         ) : (
           <h1>Loading</h1>
         )}
