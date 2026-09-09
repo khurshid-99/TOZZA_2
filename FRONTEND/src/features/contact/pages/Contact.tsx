@@ -14,11 +14,11 @@ const Contact = () => {
         />
 
         <div className="absolute top-0 left-0 w-full h-full ">
-          <div className="w-[1620px] h-full mx-auto flex flex-col justify-center gap-4 xl:gap-10  ">
-            <h1 className="text-30 lg:text-48 2xl:text-68 text-main font-n-eb ">
+          <div className="3xl:w-[1620px] h-full 2xl:mx-auto flex flex-col justify-center gap-4 xl:gap-10  ">
+            <h1 className=" text-30 lg:text-48 2xl:text-68 text-main font-n-eb ">
               Contact with Us.
             </h1>
-            <p className="text-18 lg:text-28 text-[#2E2F30] font-n-l ">
+            <p className=" text-18 lg:text-28 text-[#2E2F30] font-n-l ">
               Lorem Ipsum is simply dummy text of the printing <br /> and
               typesetting industry.
             </p>
@@ -228,34 +228,36 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="w-full aspect-1920/1109 bg-light px-pad-4xl pt-36.25 pb-pad-4xl relative ">
+      <div className="w-full aspect-400/500 md:aspect-768/580 xl:aspect-1280/800 2xl:aspect-1536/900 3xl:aspect-1920/1109 bg-light p-4 lg:py-10 xl:py-20 3xl:px-pad-4xl 3xl:pt-36.25 3xl:pb-pad-4xl relative ">
         <img
           src={aboutProduct1}
           alt=""
-          className="relative z-98 w-221 aspect-884/589 object-center object-cover ml-auto "
+          className="relative z-98 w-2/3 aspect-square md:aspect-500/400 xl:w-[60%] xl:aspect-500/350 2xl:w-210 3xl:w-221 3xl:aspect-884/589 object-center object-cover ml-auto "
         />
 
-        <div className="absolute top-56.25 left-86.5 z-99 w-[724px] h-[662px] bg-[white] pl-[87px] pr-[114px] pt-[62px] pb-[77px] ">
+        <div className="absolute top-10 left-9 md:top-20 md:left-25 lg:left-35 xl:top-30 xl:left-45 2xl:top-50 2xl:left-60 3xl:top-56.25 3xl:left-86.5 z-99 w-[20rem] md:w-[30rem] xl:w-150 2xl:w-165 3xl:w-[724px] 3xl:h-[662px] bg-[white] 3xl:pl-[87px] 3xl:pr-[114px] 3xl:pt-[62px] 3xl:pb-[77px] p-2 ">
           <img
             src={brandIcon}
             alt=""
             className="w-10.25 aspect-41/29 object-center object-cover "
           />
-          <h1 className="text-42 text-main font-n-b ">About Tazza Product</h1>
-          <p className="text-24 text-secondary font-n-l py-7.75   ">
+          <h1 className="text-22 md:text-30 lg:text-42 text-main font-n-b ">
+            About Tazza Product
+          </h1>
+          <p className="text-14 md:text-18 lg:text-24 text-secondary font-n-l py-7.75   ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer
           </p>
-          <p className="text-24 text-secondary font-n-l pb-10">
+          <p className="text-14 lg:text-24 text-secondary font-n-l pb-10">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy ....
           </p>
-          <button className="text-24 text-main px-12 py-5 bg-yellow rounded-[50px] ">
+          <button className="text-14 md:text-18 lg:text-24 text-main px-8 py-3 lg:px-12 lg:py-5 bg-yellow rounded-[50px] ">
             Explore More Product
           </button>
         </div>
-        <div className="absolute bottom-37.75  w-271 aspect-1084/319 bg-green-dark mt-auto "></div>
+        <div className="absolute bottom-10 xl:bottom-20 3xl:bottom-37.75 w-[92%] md:w-[80%] 3xl:w-271 aspect-1084/319 bg-green-dark mt-auto "></div>
       </div>
 
       <InstagramFeed />
