@@ -7,6 +7,7 @@ import {
   iamge3,
   fruits,
   popular,
+  headerCategoryIcon,
 } from "../../../images";
 import { useState } from "react";
 import Footer from "../../../utils/Footer";
@@ -20,7 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import FruitsVegetablesCart from "../components/FruitsVegetablesCart";
 import InstagramFeed from "../../../utils/InstagramFeed";
-// import CategoryNav from "../components/CategoryNav";
+import CategoryNav from "../components/CategoryNav";
 
 const Home = () => {
   const [email, setEmail] = useState("");
@@ -28,7 +29,23 @@ const Home = () => {
 
   return (
     <section className="home  ">
-      {/* <CategoryNav /> */}
+      <div className="flex items-center justify-center gap-[65px] py-[30px] ">
+        {[
+          { id: 1, name: "Today’s Deals", icon: headerCategoryIcon },
+          { id: 2, name: "Chicken", icon: headerCategoryIcon },
+          { id: 3, name: "Fish & Seafood", icon: headerCategoryIcon },
+          { id: 4, name: "Mutton", icon: headerCategoryIcon },
+          { id: 5, name: "Desi Egg", icon: headerCategoryIcon },
+          { id: 6, name: "Fruits", icon: headerCategoryIcon },
+          { id: 7, name: "Vegetables", icon: headerCategoryIcon },
+          { id: 8, name: "Chicken", icon: headerCategoryIcon },
+          { id: 9, name: "Fish & Seafood", icon: headerCategoryIcon },
+        ].map(({ id, name, icon }) => (
+          <CategoryNav name={name} icon={icon} />
+        ))}
+
+      <button className="w-[94.5px] aspect-square rounded-full border border-soft text-main text-20 font-n-sb capitalize shadow-[10px_10px_50px_rgba(0,0,0,0.2)] ">more</button>
+      </div>
       {/*  */}
       <div className="w-full aspect-400/270 md:aspect-768/300 xl:aspect-1920/750 2xl:aspect-1536/696 3xl:aspect-1920/696  relative  ">
         <img
@@ -206,6 +223,9 @@ const Home = () => {
         <div className="max-w-[1620px] mx-auto flex justify-center pt-18.75 gap-7.5 ">
           {/*  */}
           <FruitsVegetablesCart image={fruits} />
+          <FruitsVegetablesCart image={fruits} />
+          <FruitsVegetablesCart image={fruits} />
+          <FruitsVegetablesCart image={fruits} />
           {/*  */}
         </div>
       </div>
@@ -233,6 +253,9 @@ const Home = () => {
         <div className="flex items-center justify-center gap-7.5 pt-18.75  ">
           {/*  */}
           {/* <FruitsVegetablesCart image={popular} /> */}
+          <FruitsVegetablesCart image={popular} />
+          <FruitsVegetablesCart image={popular} />
+          <FruitsVegetablesCart image={popular} />
           <FruitsVegetablesCart image={popular} />
           {/*  */}
         </div>

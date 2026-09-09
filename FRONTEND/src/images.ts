@@ -39,7 +39,10 @@ import facebookIcon from "../src/assets/facebook-3.svg";
 import colorLogo from "../src/assets/logo-for-website.png";
 import loginImg from "../src/assets/login-img.svg";
 
+import headerCategoryIcon from "../src/assets/category_inner_icon.svg"
+
 export {
+  headerCategoryIcon,
   loginImg,
   colorLogo,
   googleIcon,

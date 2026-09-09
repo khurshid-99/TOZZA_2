@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router";
 const Layout = () => {
   return (
     <>
-      <nav className="flex gap-5 bg-[green] w-fit flex-wrap ">
+      {/* <nav className="flex gap-5 bg-[green] w-fit flex-wrap ">
         <Link to={"/"}>Home</Link>
         <Link to={"/product"}>Product</Link>
         <Link to={"/product/detils"}>Product Detils</Link>
@@ -11,7 +11,7 @@ const Layout = () => {
         <Link to={"/contact"}>Contact</Link>
         <Link to={"/login"}>Login</Link>
         <Link to={"/sing-up"}>Sign up</Link>
-      </nav>
+      </nav> */}
       <Outlet />
     </>
   );
