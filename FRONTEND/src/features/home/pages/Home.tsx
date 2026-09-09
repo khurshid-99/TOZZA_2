@@ -19,6 +19,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import FruitsVegetablesCart from "../components/FruitsVegetablesCart";
+import InstagramFeed from "../../../utils/InstagramFeed";
 // import CategoryNav from "../components/CategoryNav";
 
 const Home = () => {
@@ -111,7 +112,7 @@ const Home = () => {
               className="w-full object-center object-cover "
             />
           </div>
-          <h1 className="text-42 text-main text-center font-n-b ">
+          <h1 className="text-30 lg:text-42 text-main text-center font-n-b ">
             Our Best Seller
           </h1>
           <p className="text-24 text-secondary text-center">
@@ -121,7 +122,7 @@ const Home = () => {
           </p>
         </div>
         {/*  */}
-        <div className=" max-w-347.5 mx-auto pt-18.75 ">
+        <div className=" max-w-347.5 mx-auto pt-18.75 px-4 ">
           <Swiper
             navigation={true}
             slidesPerView={1}
@@ -130,7 +131,7 @@ const Home = () => {
               clickable: true,
             }}
             breakpoints={{
-              425: {
+              400: {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
@@ -192,7 +193,7 @@ const Home = () => {
                 className="w-full object-center object-cover "
               />
             </div>
-            <h1 className="text-42 text-main text-center font-n-b ">
+            <h1 className="text-30 lg:text-42 text-main text-center font-n-b ">
               Fruits & Vegetables
             </h1>
           </div>
@@ -219,7 +220,7 @@ const Home = () => {
                 className="w-full object-center object-cover "
               />
             </div>
-            <h1 className="text-42 text-main text-center font-n-b ">
+            <h1 className="text-30 lg:text-42 text-main text-center font-n-b ">
               Popular Categories
             </h1>
           </div>
@@ -238,7 +239,7 @@ const Home = () => {
       </div>
       {/*  */}
       <DeliveryStep />
-      <div className="max-w-[1620px] mx-auto pt-36.25 ">
+      <div className="max-w-[1620px] mx-auto pt-36.25  ">
         <div className="pb-18.75">
           <div className="flex flex-col items-center ">
             <div className="w-10.25 aspect-41/29 ">
@@ -259,36 +260,36 @@ const Home = () => {
           </p>
         </div>
         {/*  */}
-        <div className="max-w-[1620px] grid grid-cols-4 grid-rows-2 gap-7.5  ">
-          <div className="col-span-2 aspect-796/471 bg-[yellow] ">
+        <div className="max-w-[1620px] grid grid-cols-4 grid-rows-2 gap-2 xl:gap-7.5  ">
+          <div className="col-span-2 2xl:aspect-796/471 bg-[yellow] ">
             <img
               src={fruits}
               alt=""
-              className="w-full aspect-796/471 object-cover object-center "
+              className="w-full aspect-196/116 md:aspect-380/229 lg:aspect-508/308 xl:aspect-625/370 2xl:aspect-796/471 object-cover object-center "
             />
           </div>
           <div className="col-span-1 aspect-383/471 bg-[pink] ">
             <img
               src={iamge2}
               alt=""
-              className="w-full aspect-383/471 object-cover object-center "
+              className="w-full aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 object-cover object-center "
             />
           </div>
           <div className="col-span-1 aspect-383/471 bg-[green] ">
             <img
               src={popular}
               alt=""
-              className="w-full aspect-383/471 object-cover object-center "
+              className="w-full aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 object-cover object-center "
             />
           </div>
           <div className="col-span-1 aspect-383/471 bg-[blue] ">
             <img
               src={iamge3}
               alt=""
-              className="w-full aspect-383/471 object-cover object-center "
+              className="w-full aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 object-cover object-center "
             />
           </div>
-          <div className="col-span-1 aspect-383/471 bg-emerald-600 ">
+          <div className="col-span-1 aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 bg-emerald-600 ">
             <img
               src={fruits}
               alt=""
@@ -299,7 +300,7 @@ const Home = () => {
             <img
               src={iamge}
               alt=""
-              className="w-full aspect-796/471 object-cover object-center "
+              className="w-full aspect-196/116 md:aspect-380/229 lg:aspect-508/308 xl:aspect-625/370 2xl:aspect-796/471 object-cover object-center "
             />
           </div>
         </div>
@@ -311,42 +312,8 @@ const Home = () => {
         </div>
       </div>
       {/*  */}
-      <div className="max-w-[1620px] mx-auto pt-25 pb-pad-124">
-        <div className="pb-18.75">
-          <div className="flex flex-col items-center ">
-            <div className="w-10.25 aspect-41/29 ">
-              <img
-                src={brandIcon}
-                alt=""
-                className="w-full object-center object-cover "
-              />
-            </div>
-            <h1 className="text-42 text-main text-center font-n-b ">
-              Explore Categories
-            </h1>
-          </div>
-          <p className="text-24 text-secondary text-center ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's.
-          </p>
-        </div>
-        <div className="flex justify-center gap-7.5 ">
-          <div className="w-81.25 aspect-325/248 ">
-            <img
-              src={iamge2}
-              alt=""
-              className="w-full aspect-325/248 object-cover object-center "
-            />
-          </div>
-          <div className="w-81.25 aspect-325/248 ">
-            <img
-              src={iamge2}
-              alt=""
-              className="w-full aspect-325/248 object-cover object-center "
-            />
-          </div>
-        </div>
-      </div>
+
+      <InstagramFeed />
       <Footer />
     </section>
   );
