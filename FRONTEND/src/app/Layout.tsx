@@ -1,4 +1,6 @@
 import { Link, Outlet } from "react-router";
+import NavBar from "../utils/NavBar";
+import CategoryNav from "../utils/CategoryNav";
 
 const Layout = () => {
   return (
@@ -12,6 +14,8 @@ const Layout = () => {
         <Link to={"/login"}>Login</Link>
         <Link to={"/sing-up"}>Sign up</Link>
       </nav> */}
+      <NavBar />
+      <CategoryNav />
       <Outlet />
     </>
   );

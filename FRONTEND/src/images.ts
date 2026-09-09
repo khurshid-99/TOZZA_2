@@ -39,9 +39,27 @@ import facebookIcon from "../src/assets/facebook-3.svg";
 import colorLogo from "../src/assets/logo-for-website.png";
 import loginImg from "../src/assets/login-img.svg";
 
-import headerCategoryIcon from "../src/assets/category_inner_icon.svg"
+import headerCategoryIcon from "../src/assets/category_inner_icon.svg";
+
+import cart from "../src/assets/nav_icons/cart.svg";
+import location from "../src/assets/nav_icons/location.svg";
+import loginIcon from "../src/assets/nav_icons/user-icon.svg";
+import downArrow from "../src/assets/nav_icons/down-arrow-black.svg";
+import wish from "../src/assets/nav_icons/wish.svg";
+import navSearch from "../src/assets/nav_icons/search.png";
+
+import menuBar from "../src/assets/menu-bar.svg";
+import rightArrow from "../src/assets/right-arrow.svg";
 
 export {
+  rightArrow,
+  menuBar,
+  cart,
+  location,
+  loginIcon,
+  downArrow,
+  wish,
+  navSearch,
   headerCategoryIcon,
   loginImg,
   colorLogo,

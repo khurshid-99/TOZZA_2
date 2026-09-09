@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <section className="home  ">
-      <div className="flex items-center justify-center gap-8 lg:gap-10 3xl:gap-pad-65 py-7.5 ">
+      <div className="flex items-center justify-center gap-8 lg:gap-10 3xl:gap-pad-65 py-7.5 bg-[#F3F3F3] ">
         {[
           { id: 1, name: "Today’s Deals", icon: headerCategoryIcon },
           { id: 2, name: "Chicken", icon: headerCategoryIcon },
