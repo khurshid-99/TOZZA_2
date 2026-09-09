@@ -2,15 +2,15 @@ import { iamge, message } from "../../../images";
 
 const CommentCart = () => {
   return (
-    <div className="w-full flex items-start gap-9 ">
+    <div className="w-full flex flex-wrap items-start gap-9 ">
       <img
         src={iamge}
         alt=""
-        className="w-19.75 aspect-square object-center object-cover rounded-full "
+        className="w-15 md:w-19.75 aspect-square object-center object-cover rounded-full "
       />
-      <div className="w-full">
+      <div className="w-full ">
         <div className="w-full flex justify-between items-start border-b border-light-text pb-4">
-          <p className="w-105 text-26 text-[#343434] ">
+          <p className="md:w-105 text-20 md:text-26 text-[#343434] ">
             Lorem Ipsum is simply dummy text of the printing and?
           </p>
 
@@ -25,7 +25,7 @@ const CommentCart = () => {
             </span>
           </div>
         </div>
-        <h5 className="text-14 text-[#949494] py-4 ">
+        <h5 className="text-18 md:text-14 text-[#949494] py-4 ">
           Lorem Ipsum September 12, 2021
         </h5>
         <p className="text-20 text-[#313131] ">

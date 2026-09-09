@@ -30,7 +30,7 @@ const InstagramFeed = () => {
         </p>
       </div>
 
-      <div className="w-347.5 mx-auto flex flex-1 flex-wrap gap-2 sm:gap-4  md:gap-7.5 justify-center pb-pad-124 ">
+      <div className="2xl:w-347.5 mx-auto flex flex-1 flex-wrap gap-2 sm:gap-4  md:gap-7.5 justify-center pb-pad-124 ">
         {instagramFeed.length > 0 ? (
           instagramFeed
             .slice(0, 4)
