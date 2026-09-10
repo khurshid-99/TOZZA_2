@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import {  useNavigate } from "react-router";
 import type { ProductCartProps } from "../types/ProductCart.types";
 
 const ProductCart = ({
@@ -12,7 +12,15 @@ const ProductCart = ({
 }: ProductCartProps) => {
   const navigate = useNavigate();
 
+
+
+
+
   return (
+
+  
+
+    
     <div
       id={id.toString()}
       className="w-87.5 lg:w-107.5 shrink-0 flex flex-col bg-[#fafafa] rounded-[5px] "

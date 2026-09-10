@@ -5,6 +5,7 @@ import ProductCart from "../components/ProductCart";
 import InstagramFeed from "../../../utils/InstagramFeed";
 import Footer from "../../../utils/Footer";
 import DeliveryStep from "../../../utils/DeliveryStep";
+import { NavLink } from "react-router";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
@@ -51,10 +52,27 @@ const Product = () => {
         </div>
       </div>
       {/*  */}
-      <div className="2xl:px-pad-154 py-4 px-2 bg-base ">
-        <h4 className="text-20 ">
-          Home / <span className="text-warning-text">Chicken</span>
-        </h4>
+      <div className="2xl:px-pad-154 py-4 px-2 bg-base flex items-center gap-2 ">
+        <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            `text-20 ${isActive ? "text-warning-text" : "text-main"} `
+          }
+        >
+          Home /
+        </NavLink>
+
+        <NavLink
+          to={"/product"}
+          className={({ isActive }) =>
+            `text-20 ${isActive ? "text-warning-text" : "text-main"} `
+          }
+        >
+          Product
+        </NavLink>
+        {/* <h4 className="text-20 ">
+          Home / <span className="">Chicken</span>
+        </h4> */}
       </div>
 
       {/*  */}
