@@ -345,7 +345,7 @@ const Home = () => {
           </p>
         </div>
         <div className="w-full pt-18.75 relative flex items-center justify-center ">
-          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0  ">
+          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0 ">
             <Swiper
               // navigation={true}
               onSwiper={(swiper) => {
@@ -457,95 +457,13 @@ const Home = () => {
             Ipsum has been the industry's standard dummy text ever.
           </p>
         </div>
-        <div className="w-full pt-18.75 relative flex items-center justify-center ">
-          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0  ">
-            <Swiper
-              // navigation={true}
-              onSwiper={(swiper) => {
-                swiperRef.current = swiper;
-              }}
-              slidesPerView={1}
-              spaceBetween={10}
-              pagination={{
-                clickable: true,
-              }}
-              breakpoints={{
-                400: {
-                  slidesPerView: 1,
-                  spaceBetween: 5,
-                },
-                640: {
-                  slidesPerView: 1.9,
-                  spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 2.2,
-                  spaceBetween: 10,
-                },
-                1024: {
-                  slidesPerView: 2.8,
-                  spaceBetween: 10,
-                },
-                1280: {
-                  slidesPerView: 3.5,
-                  spaceBetween: 10,
-                },
-                1536: {
-                  slidesPerView: 4,
-                  spaceBetween: 29,
-                },
-              }}
-              modules={[Navigation]}
-              className="mySwiper "
-            >
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => swiperRef.current?.slidePrev()}
-            className="hidden 2xl:inline absolute left-0 top-1/2 z-10 -translate-y-1/2"
-          >
-            <img
-              src={prevButton}
-              alt=""
-              className="w-12.75 aspect-square object-cover object-center "
-            />
-          </button>
-
-          {/* Custom Next Button */}
-          <button
-            type="button"
-            onClick={() => swiperRef.current?.slideNext()}
-            className="hidden 2xl:inline absolute right-0 top-1/2 z-10 -translate-y-1/2"
-          >
-            <img
-              src={nextButton}
-              alt=""
-              className="w-12.75 aspect-square object-cover object-center "
-            />
-          </button>
+        <div className="flex items-center justify-center gap-7.5 pt-18.75  ">
+          {/*  */}
+          {/* <FruitsVegetablesCart image={popular} /> */}
+          <FruitsVegetablesCart image={popular} />
+          <FruitsVegetablesCart image={popular} />
+          <FruitsVegetablesCart image={popular} />
+          <FruitsVegetablesCart image={popular} />
           {/*  */}
         </div>
       </div>
