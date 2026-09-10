@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { ctaBack, LeftArrow,logo  } from "../images";
 
 
@@ -53,9 +54,9 @@ const Footer = () => {
                   alt=""
                   className="w-[5.3px] aspect-5.3/9.3 object-center object-cover "
                 />
-                <p className="text-light-text text-18 font-n-r ">
-                  Today's Specials
-                </p>
+                <NavLink to={"/about"} className="text-light-text text-18 font-n-r ">
+                  about
+                </NavLink>
               </li>
               <li className="flex items-center gap-2.75 ">
                 <img
@@ -63,7 +64,7 @@ const Footer = () => {
                   alt=""
                   className="w-[5.3px] aspect-5.3/9.3 object-center object-cover "
                 />
-                <p className="text-light-text text-18 font-n-r ">Chicken</p>
+                <NavLink to={"/contact"} className="text-light-text text-18 font-n-r ">Chicken</NavLink>
               </li>
               <li className="flex items-center gap-2.75 ">
                 <img
