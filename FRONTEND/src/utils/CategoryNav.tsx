@@ -22,7 +22,7 @@ const CategoryNav = () => {
   }, [isOpen]);
 
   return (
-    <nav className="relative px-2 lg:px-0 3xl:px-pad-4xl flex items-center justify-between py-5.5 bg-[#e2b4b4] border-t border-border-light ">
+    <nav className="relative px-2 lg:px-0 3xl:px-pad-4xl flex items-center justify-between py-5.5 bg-[#F9F9F9] border-t border-border-light ">
       <button
         onClick={() => setIsOpen(true)}
         className="flex items-center gap-2 "
