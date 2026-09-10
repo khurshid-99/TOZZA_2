@@ -13,65 +13,10 @@ const CategoryNav = ({ name, icon }: Categories) => {
           className="w-3.75 md:w-5 lg:w-6.25 xl:w-7.5 aspect-30/37.7 object-center object-cover  "
         />
       </div>
-      <h5 className="text-14 lg:text-20 text-[#1F1F1F] text-center capitalize text-nowrap ">{name}</h5>
+      <h5 className="text-14 lg:text-20 text-[#1F1F1F] text-center capitalize text-nowrap ">
+        {name}
+      </h5>
     </div>
-
-    // <div className="home_category">
-    //   <div className="home_category_item ">
-    //     <div className="shape">
-    //       <img src={icon} alt="" />
-    //     </div>
-    //     <h5>{name}</h5>
-    //   </div>
-    // {/* <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div>
-    // <div className="home_category_item">
-    //   <div className="shape">
-    //     <img src="src/assets/category_inner_icon.svg" alt="" />
-    //   </div>
-    //   <h5>Today’s Deals</h5>
-    // </div> */}
-    // </div>
   );
 };
 

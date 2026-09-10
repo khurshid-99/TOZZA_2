@@ -8,8 +8,9 @@ import {
   fruits,
   popular,
   headerCategoryIcon,
+  menuBar,
 } from "../../../images";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../../utils/Footer";
 import DeliveryStep from "../../../utils/DeliveryStep";
 import BestSellerCart from "../components/BestSellerCart";
@@ -26,10 +27,23 @@ import CategoryNav from "../components/CategoryNav";
 const Home = () => {
   const [email, setEmail] = useState("");
   const [zipCode, setZipCode] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
-    <section className="home  ">
-      <div className="flex items-center justify-center gap-8 lg:gap-10 3xl:gap-pad-65 py-7.5 bg-[#F3F3F3] ">
+    <section className=" relative">
+      <div className="flex items-start justify-center gap-3 md:gap-8 lg:gap-10 3xl:gap-pad-65 py-7.5 bg-[#f4f4f4] ">
         {[
           { id: 1, name: "Today’s Deals", icon: headerCategoryIcon },
           { id: 2, name: "Chicken", icon: headerCategoryIcon },
@@ -62,9 +76,62 @@ const Home = () => {
           );
         })}
 
-        <button className="w-15 xl:w-[94.5px] aspect-square rounded-full border border-soft text-main text-14 xl:text-20 font-n-sb capitalize shadow-[10px_10px_50px_rgba(0,0,0,0.2)] ">
-          more
-        </button>
+        <div className="flex flex-col gap-2  ">
+          <button
+            onClick={() => setIsOpen(true)}
+            className={`w-12.5 md:w-[65px] lg:w-17.5 xl:w-[84.2px]  aspect-square bg-linear-to-tl from-[white] from-30% via-[white] via-50% to-[#00000028] rounded-tr-[50%] rounded-bl-[50%] rounded-tl-[100%] rounded-br-[100%]  border-black flex items-center justify-center inset-shadow-blue-500 shadow-[10px_10px_20px_rgba(0,0,0,0.1)]  `}
+          >
+            <img
+              src={menuBar}
+              alt=""
+              className="w-3.75 md:w-5 lg:w-6.25 xl:w-7.5 aspect-30/37.7 object-center object-cover "
+            />
+          </button>
+          <span className="text-14 lg:text-20 text-[#1F1F1F] text-center capitalize text-nowrap ">
+            More
+          </span>
+        </div>
+        {/*  */}
+        <div
+          className={`fixed inset-0 z-9999 transition-all duration-400 ${
+            isOpen
+              ? "visible opacity-100"
+              : "invisible opacity-0 pointer-events-none"
+          }`}
+        >
+          <div
+            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-[#000000d7]"
+          />
+
+          <div
+            className={`absolute left-0 top-0 h-screen w-full xl:w-[25rem] bg-white text-26 text-main scroll-none
+        transition-transform duration-400 ease-in-out flex items-start justify-between px-4 py-3
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+          >
+            <div className="w-[80%] flex flex-wrap  gap-4 items-center justify-start ">
+              {[
+                { id: 1, name: "Today’s Deals", icon: headerCategoryIcon },
+                { id: 2, name: "Chicken", icon: headerCategoryIcon },
+                { id: 3, name: "Fish & Seafood", icon: headerCategoryIcon },
+                { id: 4, name: "Mutton", icon: headerCategoryIcon },
+                { id: 5, name: "Desi Egg", icon: headerCategoryIcon },
+                { id: 6, name: "Fruits", icon: headerCategoryIcon },
+                { id: 7, name: "Vegetables", icon: headerCategoryIcon },
+                { id: 8, name: "Chicken", icon: headerCategoryIcon },
+                { id: 9, name: "Fish & Seafood", icon: headerCategoryIcon },
+              ].map(({ id, name, icon }) => (
+                <div key={id} className="w-25 lg:w-30.25 ">
+                  <CategoryNav name={name} icon={icon} />
+                </div>
+              ))}
+            </div>
+            <button onClick={() => setIsOpen(false)} className="text-26 ">
+              X
+            </button>
+          </div>
+        </div>
+        {/*  */}
       </div>
       {/*  */}
       <div className="w-full aspect-400/270 md:aspect-768/300 xl:aspect-1920/750 2xl:aspect-1536/696 3xl:aspect-1920/696  relative  ">
