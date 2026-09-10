@@ -9,12 +9,15 @@ import {
   popular,
   headerCategoryIcon,
   menuBar,
+  prevButton,
+  nextButton,
 } from "../../../images";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../../../utils/Footer";
 import DeliveryStep from "../../../utils/DeliveryStep";
 import BestSellerCart from "../components/BestSellerCart";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper/modules";
 
 // Import Swiper styles
@@ -29,6 +32,8 @@ const Home = () => {
   const [zipCode, setZipCode] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
+  const swiperRef = useRef<SwiperType | null>(null);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -42,7 +47,7 @@ const Home = () => {
   }, [isOpen]);
 
   return (
-    <section className=" relative">
+    <section className="relative">
       <div className="flex items-start justify-center gap-3 md:gap-8 lg:gap-10 3xl:gap-pad-65 py-7.5 bg-[#f4f4f4] ">
         {[
           { id: 1, name: "Today’s Deals", icon: headerCategoryIcon },
@@ -207,7 +212,7 @@ const Home = () => {
         </div>
       </div>
       {/*  */}
-      <div className="3xl:max-w-[1620px] mx-auto pt-28 ">
+      <div className=" 3xl:px-pad-4xl mx-auto pt-28 ">
         <div className=" flex flex-col items-center ">
           <div className="w-10.25 aspect-41/29 ">
             <img
@@ -226,63 +231,95 @@ const Home = () => {
           </p>
         </div>
         {/*  */}
-        <div className=" max-w-347.5 mx-auto pt-18.75 px-4 ">
-          <Swiper
-            navigation={true}
-            slidesPerView={1}
-            spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              400: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 1.7,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 2.2,
-                spaceBetween: 20,
-              },
-              1280: {
-                slidesPerView: 2.7,
-                spaceBetween: 20,
-              },
-              1536: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-            }}
-            modules={[Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <BestSellerCart image={iamge} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BestSellerCart image={iamge} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BestSellerCart image={iamge} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BestSellerCart image={iamge} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BestSellerCart image={iamge} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <BestSellerCart image={iamge} />
-            </SwiperSlide>
-          </Swiper>
+        <div className="w-full pt-18.75 relative flex items-center justify-center ">
+          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0  ">
+            <Swiper
+              // navigation={true}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                400: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 1.7,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 20,
+                },
+                1280: {
+                  slidesPerView: 2.7,
+                  spaceBetween: 10,
+                },
+                1536: {
+                  slidesPerView: 3,
+                  spaceBetween: 49,
+                },
+              }}
+              modules={[Navigation]}
+              className="mySwiper "
+            >
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <BestSellerCart image={iamge} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
 
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="hidden 3xl:inline absolute left-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={prevButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
+
+          {/* Custom Next Button */}
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slideNext()}
+            className="hidden 3xl:inline absolute right-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={nextButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
           {/*  */}
         </div>
       </div>
@@ -307,12 +344,95 @@ const Home = () => {
             Ipsum has been the industry's standard dummy text ever.
           </p>
         </div>
-        <div className="max-w-[1620px] mx-auto flex justify-center pt-18.75 gap-7.5 ">
-          {/*  */}
-          <FruitsVegetablesCart image={fruits} />
-          <FruitsVegetablesCart image={fruits} />
-          <FruitsVegetablesCart image={fruits} />
-          <FruitsVegetablesCart image={fruits} />
+        <div className="w-full pt-18.75 relative flex items-center justify-center ">
+          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0  ">
+            <Swiper
+              // navigation={true}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                400: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+                },
+                640: {
+                  slidesPerView: 1.9,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 10,
+                },
+                1280: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 10,
+                },
+                1536: {
+                  slidesPerView: 4,
+                  spaceBetween: 29,
+                },
+              }}
+              modules={[Navigation]}
+              className="mySwiper "
+            >
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={iamge} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="hidden 2xl:inline absolute left-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={prevButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
+
+          {/* Custom Next Button */}
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slideNext()}
+            className="hidden 2xl:inline absolute right-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={nextButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
           {/*  */}
         </div>
       </div>
@@ -337,13 +457,95 @@ const Home = () => {
             Ipsum has been the industry's standard dummy text ever.
           </p>
         </div>
-        <div className="flex items-center justify-center gap-7.5 pt-18.75  ">
-          {/*  */}
-          {/* <FruitsVegetablesCart image={popular} /> */}
-          <FruitsVegetablesCart image={popular} />
-          <FruitsVegetablesCart image={popular} />
-          <FruitsVegetablesCart image={popular} />
-          <FruitsVegetablesCart image={popular} />
+        <div className="w-full pt-18.75 relative flex items-center justify-center ">
+          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0  ">
+            <Swiper
+              // navigation={true}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                400: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+                },
+                640: {
+                  slidesPerView: 1.9,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 10,
+                },
+                1280: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 10,
+                },
+                1536: {
+                  slidesPerView: 4,
+                  spaceBetween: 29,
+                },
+              }}
+              modules={[Navigation]}
+              className="mySwiper "
+            >
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <FruitsVegetablesCart image={popular} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="hidden 2xl:inline absolute left-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={prevButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
+
+          {/* Custom Next Button */}
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slideNext()}
+            className="hidden 2xl:inline absolute right-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={nextButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
           {/*  */}
         </div>
       </div>

@@ -3,11 +3,11 @@ interface ICard {
 }
 const FruitsVegetablesCart = ({ image }: ICard) => {
   return (
-    <div className=" w-81.25  flex flex-col gap-6 ">
+    <div className="w-full md:w-81.25  flex flex-col gap-6 ">
       <img
         src={image}
         alt=""
-        className="w-81.25 aspect-325/248 object-center object-cover "
+        className="w-full md:w-81.25 aspect-325/248 object-center object-cover "
       />
       <div className="">
         <h1 className="text-24 text-main">Fresh chopped vegetables</h1>

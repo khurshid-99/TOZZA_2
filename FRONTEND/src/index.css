@@ -145,7 +145,7 @@ body {
    Tailwind v4 Theme Tokens
    ========================================================================== */
 @theme {
-  --breakpoint-3xl: 101.25rem;
+  --breakpoint-3xl: 101.25rem /* 1620px */;
 
   /* Custom Font Families */
   --font-poppins: "Poppins", sans-serif;

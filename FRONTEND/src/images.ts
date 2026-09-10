@@ -51,7 +51,12 @@ import navSearch from "../src/assets/nav_icons/search.png";
 import menuBar from "../src/assets/menu-bar.svg";
 import rightArrow from "../src/assets/right-arrow.svg";
 
+import prevButton from "../src/assets/prev-swiper.svg";
+import nextButton from "../src/assets/next-swiper.svg";
+
 export {
+  prevButton,
+  nextButton,
   rightArrow,
   menuBar,
   cart,

@@ -4,7 +4,7 @@ interface ICard{
 
 const BestSellerCart = ({ image }:ICard) => {
   return (
-    <div className="w-90 md:w-107.5 aspect-430/490 ">
+    <div className="w-full md:w-107.5 aspect-430/490 ">
       <img
         src={image}
         alt=""
