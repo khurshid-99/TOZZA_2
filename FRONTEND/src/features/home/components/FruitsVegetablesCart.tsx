@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router";
+
 interface ICard {
   image: string;
 }
 const FruitsVegetablesCart = ({ image }: ICard) => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full md:w-81.25  flex flex-col gap-6 ">
       <img
+        onClick={() => navigate("/product")}
         src={image}
         alt=""
         className="w-full md:w-81.25 aspect-325/248 object-center object-cover "
@@ -20,7 +25,10 @@ const FruitsVegetablesCart = ({ image }: ICard) => {
             <small className="text-success-text">Rs</small>
             <span className="text-30 text-main font-n-sb">128</span>
           </h5>
-          <button className="w-34.75 aspect-139/44 rounded-[50px] text-16 text-main text-center bg-base border border-border ">
+          <button
+            onClick={() => navigate("/product/detils")}
+            className="w-34.75 aspect-139/44 rounded-[50px] text-16 text-main text-center bg-base border border-border "
+          >
             Add to Cart
           </button>
         </div>

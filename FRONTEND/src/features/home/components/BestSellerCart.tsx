@@ -1,11 +1,16 @@
-interface ICard{
-  image:string
+import { useNavigate } from "react-router";
+
+interface ICard {
+  image: string;
 }
 
-const BestSellerCart = ({ image }:ICard) => {
+const BestSellerCart = ({ image }: ICard) => {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full md:w-107.5 aspect-430/490 ">
       <img
+        onClick={() => navigate("/product")}
         src={image}
         alt=""
         className="w-full aspect-430/301 object-cover object-center "
@@ -33,7 +38,10 @@ const BestSellerCart = ({ image }:ICard) => {
               <span className="text-30 font-n-sb ">309</span>
             </h5>
           </div>
-          <button className="w-34.75 aspect-139/44 bg-base rounded-[50px] border border-border text-16 text-main  ">
+          <button
+            onClick={() => navigate("/product/detils")}
+            className="w-34.75 aspect-139/44 bg-base rounded-[50px] border border-border text-16 text-main  "
+          >
             Add to Cart
           </button>
         </div>

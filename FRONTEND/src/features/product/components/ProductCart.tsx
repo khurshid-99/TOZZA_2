@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import type { ProductCartProps } from "../types/ProductCart.types";
 
 const ProductCart = ({
@@ -8,8 +9,9 @@ const ProductCart = ({
   netWt,
   gross,
   mrp,
-
 }: ProductCartProps) => {
+  const navigate = useNavigate();
+
   return (
     <div
       id={id.toString()}
@@ -40,7 +42,10 @@ const ProductCart = ({
             <small className="text-main text-20">Rs </small>
             <span className="text-30 text-main font-n-sb ">{mrp}</span>
           </p>
-          <button className="text-16 bg-base border border-border rounded-[50px] px-[1.42rem] py-[.57rem] duration-300 active:bg-yellow ">
+          <button
+            onClick={() => navigate("/product/detils")}
+            className="text-16 bg-base border border-border rounded-[50px] px-[1.42rem] py-[.57rem] duration-300 active:bg-yellow "
+          >
             Add to Cart
           </button>
         </div>
