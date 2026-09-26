@@ -4,7 +4,7 @@ export interface ProductCartProps {
   title: string;
   subTitle: string;
   netWt: string;
-  gross: number;
-  mrp: number;
+  gross: number | string;
+  mrp: number | string;
   fn: () => void;
 }

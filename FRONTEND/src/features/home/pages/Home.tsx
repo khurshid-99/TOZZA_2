@@ -9,6 +9,23 @@ import {
   popular,
   prevButton,
   nextButton,
+  Home1,
+  Home2,
+  Home3,
+  Home4,
+  Home5,
+  Home7,
+  Home6,
+  Home8,
+  Home9,
+  Home10,
+  Home11,
+  Category1,
+  Category2,
+  Category3,
+  Category4,
+  Category5,
+  Category6,
 } from "../../../images";
 import { useEffect, useRef, useState } from "react";
 import DeliveryStep from "../../../utils/DeliveryStep";
@@ -184,25 +201,13 @@ const Home = () => {
               className="mySwiper "
             >
               <SwiperSlide>
-                <BestSellerCart image={iamge} />
+                <BestSellerCart image={Home1} />
               </SwiperSlide>
               <SwiperSlide>
-                <BestSellerCart image={iamge} />
+                <BestSellerCart image={Home2} />
               </SwiperSlide>
               <SwiperSlide>
-                <BestSellerCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <BestSellerCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <BestSellerCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <BestSellerCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <BestSellerCart image={iamge} />
+                <BestSellerCart image={Home3} />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -297,25 +302,16 @@ const Home = () => {
               className="mySwiper "
             >
               <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
+                <FruitsVegetablesCart image={Home4} />
               </SwiperSlide>
               <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
+                <FruitsVegetablesCart image={Home5} />
               </SwiperSlide>
               <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
+                <FruitsVegetablesCart image={Home6} />
               </SwiperSlide>
               <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={iamge} />
+                <FruitsVegetablesCart image={Home7} />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -410,25 +406,16 @@ const Home = () => {
               className="mySwiper "
             >
               <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
+                <FruitsVegetablesCart image={Home8} />
               </SwiperSlide>
               <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
+                <FruitsVegetablesCart image={Home9} />
               </SwiperSlide>
               <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
+                <FruitsVegetablesCart image={Home10} />
               </SwiperSlide>
               <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <FruitsVegetablesCart image={popular} />
+                <FruitsVegetablesCart image={Home11} />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -484,44 +471,54 @@ const Home = () => {
         </div>
         {/*  */}
         <div className="max-w-[1620px] grid grid-cols-4 grid-rows-2 gap-2 xl:gap-7.5  ">
-          <div className="col-span-2 2xl:aspect-796/471 bg-[yellow] ">
+          <div className="col-span-2 2xl:aspect-796/471 bg-[yellow] relative ">
             <img
-              src={fruits}
+              src={Category1}
               alt=""
               className="w-full aspect-196/116 md:aspect-380/229 lg:aspect-508/308 xl:aspect-625/370 2xl:aspect-796/471 object-cover object-center "
             />
+
+            <div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffffff27] to-[#000000be] md:pl-4 md:pb-3  xl:pl-17.25 xl:pb-16.5 flex flex-col items-start justify-end ">
+              <h1 className="text-30 text-white-text ">Raw-Chicken-fillet</h1>
+              <p className="text-20 text-white-text ">
+                Lorem Ipsum is simply dummy text of the printing.
+              </p>
+              <button className="text-20 text-white-text border-b-2 ">
+                View Details
+              </button>
+            </div>
           </div>
           <div className="col-span-1 aspect-383/471 bg-[pink] ">
             <img
-              src={iamge2}
+              src={Category2}
               alt=""
               className="w-full aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 object-cover object-center "
             />
           </div>
           <div className="col-span-1 aspect-383/471 bg-[green] ">
             <img
-              src={popular}
+              src={Category3}
               alt=""
               className="w-full aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 object-cover object-center "
             />
           </div>
           <div className="col-span-1 aspect-383/471 bg-[blue] ">
             <img
-              src={iamge3}
+              src={Category4}
               alt=""
               className="w-full aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 object-cover object-center "
             />
           </div>
           <div className="col-span-1 aspect-383/471 xl:aspect-297.5/370 2xl:aspect-383/472 3xl:aspect-383/470.5 bg-emerald-600 ">
             <img
-              src={fruits}
+              src={Category5}
               alt=""
               className="w-full aspect-383/471 object-cover object-center "
             />
           </div>
           <div className="col-span-2 aspect-796/471 bg-violet-800 ">
             <img
-              src={iamge}
+              src={Category6}
               alt=""
               className="w-full aspect-196/116 md:aspect-380/229 lg:aspect-508/308 xl:aspect-625/370 2xl:aspect-796/471 object-cover object-center "
             />

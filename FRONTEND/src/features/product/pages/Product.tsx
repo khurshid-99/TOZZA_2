@@ -1,4 +1,10 @@
-import { brandIcon, productHero } from "../../../images";
+import {
+  brandIcon,
+  Product1,
+  Product2,
+  Product3,
+  productHero,
+} from "../../../images";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCart from "../components/ProductCart";
@@ -7,21 +13,104 @@ import DeliveryStep from "../../../utils/DeliveryStep";
 import { NavLink } from "react-router";
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
-
-  const getProducts = async () => {
-    try {
-      const res = await axios.get(`https://fakestoreapi.com/products`);
-      // console.log(res.data);
-      setProducts(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getProducts();
-  }, []);
+  const [products, setProducts] = useState([
+    {
+      img: Product1,
+      title: "Chicken Curry Cut Small",
+      description: "Bone-in chunky pieces of skinless meat including...",
+      netwt: "1000gms",
+      gross: "1026gms",
+      MRP: "309",
+    },
+    {
+      img: Product2,
+      title: "Lean Goat Curry Cut",
+      description: "Bone-in chunky pieces of skinless meat including...",
+      netwt: "1000gms",
+      gross: "1026gms",
+      MRP: "309",
+    },
+    {
+      img: Product3,
+      title: "Chicken Drumstick",
+      description: "Bone-in chunky pieces of skinless meat including...",
+      netwt: "1000gms",
+      gross: "1026gms",
+      MRP: "309",
+    },
+    {
+      img: Product1,
+      title: "Chicken Breast Boneless",
+      description: "Tender and juicy boneless chicken breast pieces...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "289",
+    },
+    {
+      img: Product2,
+      title: "Chicken Wings",
+      description: "Fresh skin-on chicken wings perfect for grilling...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "199",
+    },
+    {
+      img: Product3,
+      title: "Chicken Thigh Boneless",
+      description: "Soft and tender boneless chicken thigh pieces...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "279",
+    },
+    {
+      img: Product1,
+      title: "Chicken Leg Curry Cut",
+      description: "Fresh bone-in chicken leg pieces for delicious curries...",
+      netwt: "1000gms",
+      gross: "1026gms",
+      MRP: "319",
+    },
+    {
+      img: Product2,
+      title: "Mutton Curry Cut",
+      description: "Tender bone-in mutton pieces cut perfectly for curry...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "499",
+    },
+    {
+      img: Product3,
+      title: "Mutton Keema",
+      description: "Fresh minced mutton made from quality goat meat...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "459",
+    },
+    {
+      img: Product1,
+      title: "Chicken Keema",
+      description: "Freshly minced chicken made from tender meat...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "299",
+    },
+    {
+      img: Product2,
+      title: "Chicken Lollipop",
+      description: "Juicy chicken wings trimmed into convenient lollipop...",
+      netwt: "500gms",
+      gross: "526gms",
+      MRP: "329",
+    },
+    {
+      img: Product3,
+      title: "Chicken Curry Cut Large",
+      description: "Bone-in chunky pieces of fresh skinless chicken...",
+      netwt: "1000gms",
+      gross: "1026gms",
+      MRP: "319",
+    },
+  ]);
 
   return (
     <section className="w-full bg-soft">
@@ -75,24 +164,26 @@ const Product = () => {
       </div>
 
       {/*  */}
-      <div className="2xl:w-347.5 mx-auto px-2 md:px-0 2xl:py-pad-2xl-plus  ">
+      <div className="2xl:px-pad-5xl px-2 md:px-0 2xl:py-pad-2xl-plus bg-white  ">
         <h1 className="text-32 sm:text-42 2xl:text-48 font-n-sb ">Chicken</h1>
       </div>
       {/*  */}
-      <div className="2xl:w-347.5 mx-auto flex flex-wrap items-start justify-center xljustify-between gap-8 xl:gap-12  shrink-0 pb-pad-3xl ">
+      <div className="2xl:px-pad-4xl flex flex-wrap items-start justify-center xljustify-between gap-8 xl:gap-12  shrink-0 pb-pad-3xl bg-white ">
         {products.length > 0 ? (
-          products.map(({ id, image, title, description, price }) => (
-            <ProductCart
-              id={id}
-              img={image}
-              title={title}
-              subTitle={description}
-              gross={11}
-              netWt="11"
-              mrp={price}
-              fn={() => {}}
-            />
-          ))
+          products.map(
+            ({ img, title, description, MRP, netwt, gross }, index) => (
+              <ProductCart
+                id={index}
+                img={img}
+                title={title}
+                subTitle={description}
+                gross={gross}
+                netWt={netwt}
+                mrp={MRP}
+                fn={() => {}}
+              />
+            ),
+          )
         ) : (
           <h1>Loading..</h1>
         )}
@@ -217,7 +308,6 @@ const Product = () => {
       <div className="w-full 2xl:w-347.5  mx-auto">
         <InstagramFeed />
       </div>
-
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import {  useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import type { ProductCartProps } from "../types/ProductCart.types";
 
 const ProductCart = ({
@@ -12,20 +12,12 @@ const ProductCart = ({
 }: ProductCartProps) => {
   const navigate = useNavigate();
 
-
-
-
-
   return (
-
-  
-
-    
     <div
       id={id.toString()}
-      className="w-87.5 lg:w-107.5 shrink-0 flex flex-col bg-[#fafafa] rounded-[5px] "
+      className="w-87.5 lg:w-107.5 aspect-430/490 shrink-0 flex flex-col rounded-[5px] "
     >
-      <div className="max-w-107.5 aspect-350/301 ">
+      <div className="max-w-107.5 aspect-430/301 ">
         <img
           src={img}
           alt=""
@@ -34,8 +26,8 @@ const ProductCart = ({
       </div>
       <div className="flex flex-col gap-1.5">
         <p className="text-24 text-end ">⭐⭐⭐⭐⭐</p>
-        <h1 className="text-24 text-main ">{title.slice(0, 10)}</h1>
-        <p className="text-16 text-primary">{subTitle.slice(0, 20)}</p>
+        <h1 className="text-24 text-main ">{title.slice(0, 25)}</h1>
+        <p className="text-16 text-primary">{subTitle.slice(0, 48)}...</p>
         <div className="flex">
           <p className="text-18 text-subtle font-n-r">
             Net wt: <span className="text-main">{netWt}</span>{" "}

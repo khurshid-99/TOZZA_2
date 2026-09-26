@@ -17,7 +17,7 @@ const NavHeader = () => {
         <img
           src={Todays}
           alt=""
-          className="w-[93.5px] aspect-93.5/83.3 object-cover object-center "
+          className="md:w-[40px] lg:w-[50px] xl:w-[93.5px] aspect-93.5/83.3 object-cover object-center "
         />
         <span className="text-20 text-main ">Today’s Deals</span>
       </Link>

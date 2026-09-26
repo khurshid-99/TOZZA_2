@@ -63,7 +63,59 @@ import Fruirs from "../src/assets/nav_header_icons/fruirs.svg";
 import Vegetables from "../src/assets/nav_header_icons/vegetables.svg";
 import Special_Product from "../src/assets/nav_header_icons/special_product.svg";
 
+import Home1 from "../src/assets/home_image/home_1.png";
+import Home2 from "../src/assets/home_image/home_2.png";
+import Home3 from "../src/assets/home_image/home_3.png";
+import Home4 from "../src/assets/home_image/home_4.png";
+import Home5 from "../src/assets/home_image/home_5.png";
+import Home6 from "../src/assets/home_image/home_6.png";
+import Home7 from "../src/assets/home_image/home_7.png";
+import Home8 from "../src/assets/home_image/home_8.png";
+import Home9 from "../src/assets/home_image/home_9.png";
+import Home10 from "../src/assets/home_image/home_10.png";
+import Home11 from "../src/assets/home_image/home_11.png";
+
+import Category1 from "../src/assets/home_image/category_1.png";
+import Category2 from "../src/assets/home_image/category_2.png";
+import Category3 from "../src/assets/home_image/category_3.png";
+import Category4 from "../src/assets/home_image/category_4.png";
+import Category5 from "../src/assets/home_image/category_5.png";
+import Category6 from "../src/assets/home_image/category_6.png";
+
+import Instagram1 from "../src/assets/instagram/instagram_1.png";
+import Instagram2 from "../src/assets/instagram/instagram_2.png";
+import Instagram3 from "../src/assets/instagram/instagram_3.png";
+import Instagram4 from "../src/assets/instagram/instagram_4.png";
+
+import Product1 from "../src/assets/product/product_1.png";
+import Product2 from "../src/assets/product/product_2.png";
+import Product3 from "../src/assets/product/product_3.png";
+
 export {
+  Product1,
+  Product2,
+  Product3,
+  Instagram1,
+  Instagram2,
+  Instagram3,
+  Instagram4,
+  Category1,
+  Category2,
+  Category3,
+  Category4,
+  Category5,
+  Category6,
+  Home1,
+  Home2,
+  Home3,
+  Home4,
+  Home5,
+  Home6,
+  Home7,
+  Home8,
+  Home9,
+  Home10,
+  Home11,
   Todays,
   Chicken,
   Fish,

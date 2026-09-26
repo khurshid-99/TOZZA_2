@@ -1,5 +1,11 @@
 import axios from "axios";
-import { brandIcon } from "../images";
+import {
+  brandIcon,
+  Instagram1,
+  Instagram2,
+  Instagram3,
+  Instagram4,
+} from "../images";
 import InstagramFeedCart from "./InstagramFeedCart";
 import { useEffect, useState } from "react";
 
@@ -31,13 +37,10 @@ const InstagramFeed = () => {
       </div>
 
       <div className="2xl:w-347.5 mx-auto flex flex-1 flex-wrap gap-2 sm:gap-4  md:gap-7.5 justify-center pb-pad-124 ">
-        {instagramFeed.length > 0 ? (
-          instagramFeed
-            .slice(0, 4)
-            .map(({ image, id }) => <InstagramFeedCart key={id} image={image} />)
-        ) : (
-          <h1>Loading</h1>
-        )}
+        <InstagramFeedCart image={Instagram1} />
+        <InstagramFeedCart image={Instagram2} />
+        <InstagramFeedCart image={Instagram3} />
+        <InstagramFeedCart image={Instagram4} />
       </div>
     </>
   );
