@@ -8,7 +8,6 @@ import {
   star,
 } from "../../../images";
 import DeliveryStep from "../../../utils/DeliveryStep";
-import Footer from "../../../utils/Footer";
 import InstagramFeed from "../../../utils/InstagramFeed";
 import LikeCart from "../components/LikeCart";
 import MessageCart from "../components/MessageCart";
@@ -363,7 +362,6 @@ const ProductDetils = () => {
       {/*  */}
       <DeliveryStep />
       <InstagramFeed />
-      <Footer />
     </section>
   );
 };

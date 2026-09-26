@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCart from "../components/ProductCart";
 import InstagramFeed from "../../../utils/InstagramFeed";
-import Footer from "../../../utils/Footer";
 import DeliveryStep from "../../../utils/DeliveryStep";
 import { NavLink } from "react-router";
 
@@ -13,7 +12,7 @@ const Product = () => {
   const getProducts = async () => {
     try {
       const res = await axios.get(`https://fakestoreapi.com/products`);
-      console.log(res.data);
+      // console.log(res.data);
       setProducts(res.data);
     } catch (error) {
       console.log(error);
@@ -219,7 +218,6 @@ const Product = () => {
         <InstagramFeed />
       </div>
 
-      <Footer />
     </section>
   );
 };

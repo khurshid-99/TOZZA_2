@@ -7,13 +7,10 @@ import {
   iamge3,
   fruits,
   popular,
-  headerCategoryIcon,
-  menuBar,
   prevButton,
   nextButton,
 } from "../../../images";
 import { useEffect, useRef, useState } from "react";
-import Footer from "../../../utils/Footer";
 import DeliveryStep from "../../../utils/DeliveryStep";
 import BestSellerCart from "../components/BestSellerCart";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,7 +22,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import FruitsVegetablesCart from "../components/FruitsVegetablesCart";
 import InstagramFeed from "../../../utils/InstagramFeed";
-import CategoryNav from "../components/CategoryNav";
+import NavHeader from "../components/NavHeader";
 
 const Home = () => {
   const [email, setEmail] = useState("");
@@ -48,6 +45,10 @@ const Home = () => {
 
   return (
     <section className="relative">
+      {/*  */}
+
+      <NavHeader />
+
       {/*  */}
       <div className="w-full aspect-400/270 md:aspect-768/300 xl:aspect-1920/750 2xl:aspect-1536/696 3xl:aspect-1920/696  relative  ">
         <img
@@ -536,7 +537,6 @@ const Home = () => {
       {/*  */}
 
       <InstagramFeed />
-      <Footer />
     </section>
   );
 };

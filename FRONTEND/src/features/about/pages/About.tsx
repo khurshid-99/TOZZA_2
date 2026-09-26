@@ -9,7 +9,6 @@ import {
 import CommentCart from "../components/CommentCart";
 import ReviewCart from "../components/ReviewCart";
 import InstagramFeed from "../../../utils/InstagramFeed";
-import Footer from "../../../utils/Footer";
 
 const About = () => {
   return (
@@ -98,8 +97,10 @@ const About = () => {
           />
           <h1 className="text-32 lg:text-42 text-main font-n-b ">Why Tazza?</h1>
           <ul className="flex flex-col gap-1 pt-7 pb-17 ">
-            <li className="text-18 md:text-24 text-secondary font-n-l xl:leading-9.75
-             ">
+            <li
+              className="text-18 md:text-24 text-secondary font-n-l xl:leading-9.75
+             "
+            >
               <span className="inline-block w-3 aspect-square mr-4 rounded-full bg-[#00B3F0] "></span>
               Lorem Ipsum is simply dummy text of the
             </li>
@@ -125,6 +126,8 @@ const About = () => {
           </button>
         </div>
       </div>
+      {/* Customer questions & answers and Reviews */}
+
       <div className="w-full flex flex-wrap ">
         <div className="w-full lg:w-1/2 aspect-960/1150 lg:px-4 3xl:pl-pad-4xl 3xl:pr-19.5 py-16 bg-light flex flex-col  ">
           <div>
@@ -191,7 +194,6 @@ const About = () => {
         </div>
       </div>
       <InstagramFeed />
-      <Footer />
     </section>
   );
 };

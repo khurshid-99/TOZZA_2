@@ -2,7 +2,7 @@ import { iamge, message } from "../../../images";
 
 const CommentCart = () => {
   return (
-    <div className="w-full flex flex-wrap items-start gap-9 ">
+    <div className="w-full flex flex-wrap 2xl:flex-nowrap items-start gap-9 ">
       <img
         src={iamge}
         alt=""

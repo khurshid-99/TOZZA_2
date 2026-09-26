@@ -64,7 +64,7 @@ const Footer = () => {
                   alt=""
                   className="w-[5.3px] aspect-5.3/9.3 object-center object-cover "
                 />
-                <NavLink to={"/contact"} className="text-light-text text-18 font-n-r ">Chicken</NavLink>
+                <NavLink to={""} className="text-light-text text-18 font-n-r ">Chicken</NavLink>
               </li>
               <li className="flex items-center gap-2.75 ">
                 <img

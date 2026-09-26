@@ -54,7 +54,24 @@ import rightArrow from "../src/assets/right-arrow.svg";
 import prevButton from "../src/assets/prev-swiper.svg";
 import nextButton from "../src/assets/next-swiper.svg";
 
+import Todays from "../src/assets/nav_header_icons/todays_deals.svg";
+import Chicken from "../src/assets/nav_header_icons/chicken.svg";
+import Fish from "../src/assets/nav_header_icons/fish.svg";
+import Mutton from "../src/assets/nav_header_icons/mutton.svg";
+import Eggs from "../src/assets/nav_header_icons/eggs.svg";
+import Fruirs from "../src/assets/nav_header_icons/fruirs.svg";
+import Vegetables from "../src/assets/nav_header_icons/vegetables.svg";
+import Special_Product from "../src/assets/nav_header_icons/special_product.svg";
+
 export {
+  Todays,
+  Chicken,
+  Fish,
+  Mutton,
+  Eggs,
+  Fruirs,
+  Vegetables,
+  Special_Product,
   prevButton,
   nextButton,
   rightArrow,

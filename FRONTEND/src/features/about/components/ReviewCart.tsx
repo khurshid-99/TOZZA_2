@@ -2,7 +2,7 @@ import { disLike, dowArrow, iamge, like } from "../../../images";
 
 const ReviewCart = () => {
   return (
-    <div className="2xl:w-178.5 flex flex-wrap items-start gap-6">
+    <div className="2xl:w-178.5 flex flex-wrap 2xl:flex-nowrap items-start gap-6">
       <img
         src={iamge}
         alt=""

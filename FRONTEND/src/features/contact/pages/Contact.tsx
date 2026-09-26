@@ -1,16 +1,15 @@
 import { NavLink } from "react-router";
 import { aboutProduct1, brandIcon, contactHero } from "../../../images";
 import InstagramFeed from "../../../utils/InstagramFeed";
-import Footer from "../../../utils/Footer";
 
 const Contact = () => {
   return (
     <section>
-      <header className="relative w-full aspect-400/220 md:aspect-768/300 xl:aspect-1920/506 ">
+      <header className="relative w-full aspect-400/220 md:aspect-768/300 xl:aspect-1920/506 2xl:aspect-1920/506 bg-amber-500 ">
         <img
           src={contactHero}
           alt=""
-          className="w-full aspect-400/220 md:aspect-768/300 object-cover object-center "
+          className="w-full aspect-400/220 md:aspect-768/300 2xl:aspect-1920/506 object-cover object-center "
         />
 
         <div className="absolute top-0 left-0 w-full h-full ">
@@ -235,7 +234,7 @@ const Contact = () => {
           className="relative z-98 w-2/3 aspect-square md:aspect-500/400 xl:w-[60%] xl:aspect-500/350 2xl:w-210 3xl:w-221 3xl:aspect-884/589 object-center object-cover ml-auto "
         />
 
-        <div className="absolute top-10 left-9 md:top-20 md:left-25 lg:left-35 xl:top-30 xl:left-45 2xl:top-50 2xl:left-60 3xl:top-56.25 3xl:left-86.5 z-99 w-[20rem] md:w-[30rem] xl:w-150 2xl:w-165 3xl:w-[724px] 3xl:h-[662px] bg-[white] 3xl:pl-[87px] 3xl:pr-[114px] 3xl:pt-[62px] 3xl:pb-[77px] p-2 ">
+        <div className="absolute top-10 left-9 md:top-20 md:left-25 lg:left-35 xl:top-30 xl:left-45 2xl:top-50 2xl:left-60 3xl:top-56.25 3xl:left-86.5 z-99 w-[20rem] md:w-120 xl:w-150 2xl:w-165 3xl:w-181 3xl:h-165.5 bg-[white] 3xl:pl-21.75 3xl:pr-28.5 3xl:pt-15.5 3xl:pb-pad-3xl-plus p-2 ">
           <img
             src={brandIcon}
             alt=""
@@ -261,7 +260,6 @@ const Contact = () => {
       </div>
 
       <InstagramFeed />
-      <Footer />
     </section>
   );
 };

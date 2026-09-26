@@ -20,6 +20,20 @@ const NavBar = () => {
           Order Now
         </button>
       </nav>
+      <nav className=" flex justify-center gap-10 pt-4 ">
+        <Link to={"/"} className="text-20 text-main font-n-sb ">
+          Home
+        </Link>
+        <Link to={"/product"} className="text-20 text-main font-n-sb ">
+          Product
+        </Link>
+        <Link to={"/about"} className="text-20 text-main font-n-sb ">
+          About
+        </Link>
+        <Link to={"/contact"} className="text-20 text-main font-n-sb ">
+          Contact
+        </Link>
+      </nav>
       <nav className="3xl:px-pad-4xl py-5 flex items-center justify-between bg-white ">
         <img
           src={colorLogo}
@@ -83,7 +97,7 @@ const NavBar = () => {
             />
             <span className="text-18 text-main ">cart</span>
           </Link>
-          <Link to={""} className="flex items-center gap-3  ">
+          <Link to={"/login"} className="flex items-center gap-3  ">
             <div className="w-12.5 aspect-square rounded-full bg-white border border-[#CECECE] flex items-center justify-center ">
               <img
                 src={loginIcon}
