@@ -91,7 +91,16 @@ import Product1 from "../src/assets/product/product_1.png";
 import Product2 from "../src/assets/product/product_2.png";
 import Product3 from "../src/assets/product/product_3.png";
 
+import Detail1 from "../src/assets/product_detils/detail_1.png";
+import Detail2 from "../src/assets/product_detils/detail_2.png";
+import Detail3 from "../src/assets/product_detils/detail_3.png";
+import Detail4 from "../src/assets/product_detils/detail_4.png";
+
 export {
+  Detail1,
+  Detail2,
+  Detail3,
+  Detail4,
   Product1,
   Product2,
   Product3,

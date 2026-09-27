@@ -1,15 +1,18 @@
-import { iamge2 } from "../../../images";
+interface Like {
+  img: string;
+  title: string
+}
 
-const LikeCart = () => {
+const LikeCart = ({ img, title }: Like) => {
   return (
-    <div className="w-full sm:w-81.25 shrink-0 ">
+    <div className="w-full md:w-81.25 md:aspect-325/393 shrink-0 ">
       <img
-        src={iamge2}
+        src={img}
         alt=""
-        className="w-full aspect-325/248   object-center object-cover"
+        className="w-full md:w-81.25 md:aspect-325/248   object-center object-cover"
       />
       <div className="pt-3.75 ">
-        <h1 className="text-24 text-main ">Raw-Chicken-fillet</h1>
+        <h1 className="text-24 text-main ">{title}</h1>
         <p className="text-18 text-subtle pt-3 pb-2.5 ">
           WT : <span className="text-main ">1000gms</span>
         </p>

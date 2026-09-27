@@ -2,11 +2,6 @@ import "../styles/Home.scss";
 import banner from "../../../assets/banner-image.png";
 import {
   brandIcon,
-  iamge,
-  iamge2,
-  iamge3,
-  fruits,
-  popular,
   prevButton,
   nextButton,
   Home1,
@@ -344,6 +339,8 @@ const Home = () => {
         </div>
       </div>
       {/*  */}
+
+      {/* Popular Categories */}
       <div className="max-w-[1620px] mx-auto pt-28 pb-41 ">
         <div className="">
           <div className="flex flex-col items-center ">

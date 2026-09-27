@@ -1,8 +1,13 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import {
   addToCart,
   brandIcon,
+  Detail1,
+  Detail2,
+  Detail3,
+  Detail4,
   iamge2,
+  nextButton,
+  prevButton,
   productDetilsImg,
   search,
   star,
@@ -15,18 +20,31 @@ import ReviewCart from "../components/ReviewCart";
 import { notifications } from "../testData/MessageData";
 import { reviewsData } from "../testData/ReviewMessageData";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
+import { Navigation } from "swiper/modules";
+
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {  Pagination } from "swiper/modules";
+
+import { useRef } from "react";
+import { Link, NavLink } from "react-router";
 
 const ProductDetils = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <section className="">
       <div className="3xl:w-[1620px] mx-auto  pb-29  ">
         <div className=" text-20 font-n-r flex items-center gap-2 py-5.75">
-          <p>Home</p> /<p>Product</p>/<p className="text-orange ">Chicken </p>
+          <Link to={""}>Home</Link>/<Link to={""}>Product</Link>/
+          <NavLink
+            to={""}
+            className={({ isActive }) => (isActive ? "text-orange" : "")}
+          >
+            Chicken
+          </NavLink>
+          {/* <p>Home</p> /<p>Product</p>/<p className="text-orange ">Chicken </p> */}
         </div>
         <div className="w-full flex flex-wrap gap-22.5 px-4 2xl:px-0 ">
           {/*  */}
@@ -282,6 +300,7 @@ const ProductDetils = () => {
         </div>
       </div>
       {/*  */}
+      {/* You May Also Like */}
       <div className="3xl:w-[1620px] mx-auto py-10  md:pt-26 md:pb-32.5 ">
         <div className="flex flex-col items-center ">
           <img
@@ -296,67 +315,87 @@ const ProductDetils = () => {
             ever.
           </p>
         </div>
-        <div className="flex items-start justify-center gap-7.5 pt-18.75 flex-nowrap cursor-e-resize ">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={10}
-            // pagination={{
-            //   clickable: true,
-            // }}
-            breakpoints={{
-              425: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2.3,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3.1,
-                spaceBetween: 20,
-              },
-              1280: {
-                slidesPerView: 3.9,
-                spaceBetween: 20,
-              },
-              1536: {
-                slidesPerView: 4.6,
-                spaceBetween: 20,
-              },
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
+
+        <div className="relative ">
+          <div className="w-full 2xl:w-347.5 mx-auto pt-18.75 cursor-e-resize ">
+            <Swiper
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              slidesPerView={1}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              breakpoints={{
+                400: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+                },
+                640: {
+                  slidesPerView: 1.9,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2.2,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 10,
+                },
+                1280: {
+                  slidesPerView: 3.5,
+                  spaceBetween: 10,
+                },
+                1536: {
+                  slidesPerView: 4,
+                  spaceBetween: 29,
+                },
+              }}
+              modules={[Navigation]}
+              className="mySwiper "
+            >
+              <SwiperSlide>
+                <LikeCart img={Detail1} title={"Raw-Chicken-fillet"} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <LikeCart img={Detail2} title={"Fresh-Fish-slices"} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <LikeCart img={Detail3} title={"Assorted-Spices-eggs"} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <LikeCart img={Detail4} title={"Raw Chicken Breast-fillets"} />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="hidden 2xl:inline absolute left-0 top-1/2 z-10 -translate-y-1/2"
           >
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-            <SwiperSlide>
-              <LikeCart />
-            </SwiperSlide>
-          </Swiper>
+            <img
+              src={prevButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
+
+          {/* Custom Next Button */}
+          <button
+            type="button"
+            onClick={() => swiperRef.current?.slideNext()}
+            className="hidden 2xl:inline absolute right-0 top-1/2 z-10 -translate-y-1/2"
+          >
+            <img
+              src={nextButton}
+              alt=""
+              className="w-12.75 aspect-square object-cover object-center "
+            />
+          </button>
+          {/*  */}
         </div>
       </div>
       {/*  */}
