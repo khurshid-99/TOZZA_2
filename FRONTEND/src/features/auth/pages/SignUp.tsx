@@ -1,14 +1,15 @@
 import { colorLogo, facebookIcon, googleIcon, loginImg } from "../../../images";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   return (
     <section className="w-full h-screen flex  ">
       <aside className="min-w-163.5 h-screen relative ">
         <img
           src={loginImg}
           alt=""
-          className="w-full h-full object-center object-cover "
+          className="w-full h-full object-center object-cover  "
         />
         <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-[#000000bd] to-[#0000005e] px-19 pb-[130px] flex flex-col justify-end ">
           <h2 className="text-30 text-white-text font-n-b ">Ready to Cook</h2>
@@ -25,7 +26,8 @@ const SignUp = () => {
           <img
             src={colorLogo}
             alt=""
-            className="w-[177.5px]  aspect-177.5/40.7 object-cover object-center "
+            onClick={() => navigate("/")}
+            className="w-[177.5px]  aspect-177.5/40.7 object-cover object-center cursor-pointer "
           />
           <div className="w-full h-full pt-10 flex flex-col items-center">
             <div className="w-165.5 flex gap-2">
@@ -82,7 +84,7 @@ const SignUp = () => {
               </div>
 
               <button className="w-63.5 aspect-254/76 bg-[#00ADEF] rounded-[50px] text-24 text-white-text  ">
-                Login
+                Sign Up
               </button>
             </form>
             <div className="pt-12">

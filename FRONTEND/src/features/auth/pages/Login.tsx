@@ -1,7 +1,9 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { colorLogo, facebookIcon, googleIcon, loginImg } from "../../../images";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="w-full  flex  ">
       <aside className="min-w-163.5 h-screen relative ">
@@ -24,8 +26,9 @@ const Login = () => {
         <div>
           <img
             src={colorLogo}
+            onClick={() => navigate("/")}
             alt=""
-            className="w-[177.5px]  aspect-177.5/40.7 object-cover object-center "
+            className="w-[177.5px]  aspect-177.5/40.7 object-cover object-center cursor-pointer "
           />
           <div className="w-full h-full pt-10 flex flex-col items-center ">
             <div className="w-165.5 flex gap-2">

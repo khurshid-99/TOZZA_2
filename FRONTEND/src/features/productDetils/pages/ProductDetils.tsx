@@ -28,11 +28,15 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { useRef } from "react";
-import { Link, NavLink } from "react-router";
+import { useRef, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router";
 
 const ProductDetils = () => {
   const swiperRef = useRef<SwiperType | null>(null);
+  const navigate = useNavigate();
+  const [count, setCount] = useState(1);
+  const [price, setPrice] = useState(309);
+
   return (
     <section className="">
       <div className="3xl:w-[1620px] mx-auto  pb-29  ">
@@ -44,7 +48,6 @@ const ProductDetils = () => {
           >
             Chicken
           </NavLink>
-          {/* <p>Home</p> /<p>Product</p>/<p className="text-orange ">Chicken </p> */}
         </div>
         <div className="w-full flex flex-wrap gap-22.5 px-4 2xl:px-0 ">
           {/*  */}
@@ -143,23 +146,39 @@ const ProductDetils = () => {
               <div className="w-80.5 aspect-322/473 bg-light rounded-2xl flex flex-col items-center justify-center gap-9 text-center ">
                 <div>
                   <p className="text-30 text-main ">
-                    Rs <span className="text-52 font-n-sb ">309</span>{" "}
+                    Rs{" "}
+                    <span className="text-52 font-n-sb ">
+                      {count * price}
+                    </span>{" "}
                   </p>
                   <p className="text-[1.1rem] text-success-text ">In Stock</p>
                 </div>
                 <div className="flex flex-col gap-4 ">
                   <div className="w-62.25 aspect-249/76 bg-white rounded-2xl flex items-center justify-around text-24 ">
-                    <button className="flex items-center justify-center  ">
+                    <button
+                      onClick={() => {
+                        if (count > 1) {
+                          setCount(count - 1);
+                        }
+                      }}
+                      className="flex items-center justify-center w-20.75 aspect-83/76 "
+                    >
                       <span className="inline-block w-5 h-0.75 bg-black "></span>
                     </button>
-                    <div className="w-21.25 aspect-85/38 flex items-center justify-center border-r-2 border-l-2 border-[#DCDCDC] ">
-                      2
+                    <div className="w-20.75 aspect-83/38 flex items-center justify-center border-r-2 border-l-2 border-[#DCDCDC]  ">
+                      {count}
                     </div>
-                    <button className="text-30 font-n-b text-center active:scale-99 ">
+                    <button
+                      onClick={() => setCount(count + 1)}
+                      className="w-20.75 aspect-83/76 text-30 font-n-b text-center active:scale-90 "
+                    >
                       +
                     </button>
                   </div>
-                  <button className="bg-warning-bg w-62.25 aspect-249/76 flex items-center justify-center gap-2  rounded-2xl ">
+                  <button
+                    onClick={() => navigate("/checkout")}
+                    className="bg-warning-bg w-62.25 aspect-249/76 flex items-center justify-center gap-2  rounded-2xl "
+                  >
                     <img
                       src={addToCart}
                       alt=""
