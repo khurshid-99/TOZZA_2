@@ -12,7 +12,7 @@ import {
 
 const NavHeader = () => {
   return (
-    <nav className="2xl:px-pad-4xl py-7.5 flex items-center justify-between bg-light ">
+    <nav className="2xl:px-pad-4xl py-7.5 flex items-center justify-between bg-light  ">
       <Link to={""} className="flex flex-col items-center gap-y-1 ">
         <img
           src={Todays}
@@ -78,7 +78,7 @@ const NavHeader = () => {
         <span className="text-20 text-main ">Special Product</span>
       </Link>
       <Link
-        to={""}
+        to={"/product"}
         className="w-[94.5px] aspect-square rounded-full bg-primary-dark flex items-center justify-center text-white-text text-20 font-n-sb  "
       >
         More

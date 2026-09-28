@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import {
   cart,
   colorLogo,
@@ -10,6 +10,8 @@ import {
 } from "../images";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <nav className="flex flex-wrap items-center justify-center gap-2 py-3.25 bg-yellow">
@@ -38,7 +40,8 @@ const NavBar = () => {
         <img
           src={colorLogo}
           alt=""
-          className="w-20 xl:w-48.25 aspect-193/71.4 object-center object-contain "
+          onClick={() => navigate("/")}
+          className="w-20 xl:w-48.25 aspect-193/71.4 object-center object-contain cursor-pointer "
         />
         <div className="flex items-center gap-9.5">
           <div className="hidden xl:flex items-center gap-2.75 ">
@@ -89,7 +92,7 @@ const NavBar = () => {
             />
             <span className="text-18 text-main ">Wish List</span>
           </Link>
-          <Link to={""} className="hidden xl:flex items-center gap-3 ">
+          <Link to={"/checkout"} className="hidden xl:flex items-center gap-3 ">
             <img
               src={cart}
               alt=""

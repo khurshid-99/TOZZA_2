@@ -96,7 +96,12 @@ import Detail2 from "../src/assets/product_detils/detail_2.png";
 import Detail3 from "../src/assets/product_detils/detail_3.png";
 import Detail4 from "../src/assets/product_detils/detail_4.png";
 
+import Checkout1 from "../src/assets/checkout/checkout_1.png";
+import CloseIcon from "../src/assets/close_icon.svg"
+
 export {
+  CloseIcon,
+  Checkout1,
   Detail1,
   Detail2,
   Detail3,

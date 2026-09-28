@@ -146,6 +146,7 @@ body {
    ========================================================================== */
 @theme {
   --breakpoint-3xl: 101.25rem /* 1620px */;
+  /* --breakpoint-3xl-plus: 1600px 1600px */
 
   /* Custom Font Families */
   --font-poppins: "Poppins", sans-serif;
@@ -260,6 +261,11 @@ body {
   --spacing-pad-3xl-plus: 4.8125rem; /* 77px */
   --spacing-pad-65: 4.0625rem; /* 65px */
   --spacing-pad-2xl-plus: 2.1875rem; /* 35px */
+
+
+  /* Custom Shadow */
+    --shadow-3xl: 0 35px 35px rgba(0, 0, 0, 0.25); 
+
 }
 
 ::-webkit-scrollbar {
