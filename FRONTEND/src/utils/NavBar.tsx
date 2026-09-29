@@ -22,7 +22,7 @@ const NavBar = () => {
           Order Now
         </button>
       </nav>
-      <nav className=" flex justify-center gap-10 pt-4 ">
+      {/* <nav className=" flex justify-center gap-10 pt-4 ">
         <Link to={"/"} className="text-20 text-main font-n-sb ">
           Home
         </Link>
@@ -35,7 +35,7 @@ const NavBar = () => {
         <Link to={"/contact"} className="text-20 text-main font-n-sb ">
           Contact
         </Link>
-      </nav>
+      </nav> */}
       <nav className="3xl:px-pad-4xl py-5 flex items-center justify-between bg-white ">
         <img
           src={colorLogo}

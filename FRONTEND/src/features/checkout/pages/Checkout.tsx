@@ -62,7 +62,7 @@ const Checkout = () => {
         <CheckoutCard />
       </div>
       {/*  */}
-      <div className="2xl:px-pad-4xl pb-18 ">
+      <div className="max-w-[1620px] mx-auto pb-18 ">
         <p className="text-22 text-[#FF6700] ">
           Delivery to :{" "}
           <span className="text-[#898989] ">Customer Address</span>
