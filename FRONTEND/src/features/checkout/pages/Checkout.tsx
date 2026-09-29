@@ -69,26 +69,28 @@ const Checkout = () => {
         </p>
       </div>
       {/*  */}
-      <div className="w-full aspect-1920/95 2xl:px-pad-4xl bg-white flex flex-col lg:flex-row md:items-center justify-between gap-4 lg:gap-0 shadow-[0px_10px_10px_rgba(0,0,0,0.05)] relative z-99 ">
-        <p className="text-20 text-[#898989] ">
-          You have selected 2 item out of all 2 item
-        </p>
+      <div className="w-full aspect-1920/95 bg-white  shadow-[0px_10px_10px_rgba(0,0,0,0.05)] relative z-99 ">
+        <div className="max-w-[1620px] mx-auto flex flex-col lg:flex-row md:items-center justify-between gap-4 lg:gap-0">
+          <p className="text-20 text-[#898989] ">
+            You have selected 2 item out of all 2 item
+          </p>
 
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 lg:gap-0  ">
-          <div className="md:text-end md:pr-15 ">
-            <h2 className="text-30 text-[#FF6700]">Total: 1,236</h2>
-            <p className="text-20 text-[#B1B1B1] ">
-              Not including shipping fee
-            </p>
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4 lg:gap-0  ">
+            <div className="md:text-end md:pr-15 ">
+              <h2 className="text-30 text-[#FF6700]">Total: 1,236</h2>
+              <p className="text-20 text-[#B1B1B1] ">
+                Not including shipping fee
+              </p>
+            </div>
+            <button className="w-70.5 aspect-282/95 bg-[#FF6700] text-30 text-white  ">
+              Check Our (2)
+            </button>
           </div>
-          <button className="w-70.5 aspect-282/95 bg-[#FF6700] text-30 text-white  ">
-            Check Our (2)
-          </button>
         </div>
       </div>
       {/* --- */}
 
-      <div className=" 4xl:px-pad-4xl py-10  md:pt-26 md:pb-32.5 bg-[white] ">
+      <div className="py-10 md:pt-26 md:pb-32.5 bg-[white] ">
         <div className="flex flex-col items-center bg-white ">
           <img
             src={brandIcon}
@@ -103,8 +105,8 @@ const Checkout = () => {
           </p>
         </div>
 
-        <div className="relative">
-          <div className="w-full 2xl:w-347.5 mx-auto pt-18.75 cursor-e-resize ">
+        <div className="relative pt-18.75 max-w-[1620px] mx-auto flex items-center justify-center">
+          <div className="w-full 2xl:w-347.5 md:px-4 2xl:px-0 ">
             <Swiper
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
@@ -161,7 +163,7 @@ const Checkout = () => {
           <button
             type="button"
             onClick={() => swiperRef.current?.slidePrev()}
-            className="hidden 2xl:inline absolute 2xl:left-0 3xl:left-30 top-1/2 z-10 -translate-y-1/2"
+            className="hidden 2xl:inline absolute left-0 top-1/2 z-10 -translate-y-1/2"
           >
             <img
               src={prevButton}
@@ -169,12 +171,11 @@ const Checkout = () => {
               className="w-12.75 aspect-square object-cover object-center "
             />
           </button>
-
           {/* Custom Next Button */}
           <button
             type="button"
             onClick={() => swiperRef.current?.slideNext()}
-            className="hidden 2xl:inline absolute 2xl:right-0  3xl:right-30 3xl-plus:right-10 top-1/2 z-10 -translate-y-1/2"
+            className="hidden 2xl:inline absolute right-0 top-1/2 z-10 -translate-y-1/2"
           >
             <img
               src={nextButton}

@@ -58,9 +58,7 @@ const Home = () => {
   return (
     <section className="relative">
       {/*  */}
-
       <NavHeader />
-
       {/*  */}
       <div className="w-full aspect-400/270 md:aspect-768/300 xl:aspect-1920/750 2xl:aspect-1536/696 3xl:aspect-1920/696  relative  ">
         <img
@@ -154,7 +152,7 @@ const Home = () => {
           </p>
         </div>
         {/*  */}
-        <div className="w-full pt-18.75 relative flex items-center justify-center ">
+        <div className="max-w-[1620px] mx-auto pt-18.75 relative flex items-center justify-center ">
           <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0  ">
             <Swiper
               // navigation={true}
@@ -218,7 +216,6 @@ const Home = () => {
               className="w-12.75 aspect-square object-cover object-center "
             />
           </button>
-
           {/* Custom Next Button */}
           <button
             type="button"
@@ -256,7 +253,7 @@ const Home = () => {
           </p>
         </div>
         <div className="w-full pt-18.75 relative flex items-center justify-center ">
-          <div className="w-full 2xl:w-347.5  md:px-4 2xl:px-0 ">
+          <div className="w-full 2xl:w-347.5 md:px-4 2xl:px-0 ">
             <Swiper
               // navigation={true}
               onSwiper={(swiper) => {

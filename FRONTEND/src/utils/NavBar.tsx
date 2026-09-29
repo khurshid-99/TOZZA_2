@@ -13,8 +13,8 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <nav className="flex flex-wrap items-center justify-center gap-2 py-3.25 bg-yellow">
+    <nav className="">
+      <nav className=" flex flex-wrap items-center justify-center gap-2 py-3.25 bg-yellow">
         <p className="text-14 md:text-20 text-main ">
           Order today and get free Shipping on your First Delivery
         </p>
@@ -36,7 +36,7 @@ const NavBar = () => {
           Contact
         </Link>
       </nav> */}
-      <nav className="3xl:px-pad-4xl py-5 flex items-center justify-between bg-white ">
+      <nav className="max-w-[1620px] mx-auto py-5 flex items-center justify-between bg-white ">
         <img
           src={colorLogo}
           alt=""
@@ -114,7 +114,7 @@ const NavBar = () => {
           </Link>
         </div>
       </nav>
-    </>
+    </nav>
   );
 };
 
