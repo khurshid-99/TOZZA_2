@@ -27,9 +27,9 @@ const Checkout = () => {
   console.log(window.innerWidth);
 
   return (
-    <section className="w-full  bg-[#F3F3F3] ">
+    <section className="w-full  bg-[#F3F3F3] pt-15 ">
       <div className="max-w-[1620px] mx-auto flex items-center justify-between bg-white py-3.5 ">
-        <div className="w-full lg:w-1/2 flex items-center bg-white">
+        <div className="w-full lg:w-1/2 flex items-center ">
           <div className="md:w-[93px] 2xl:w-28.75 flex items-center justify-end pl-3 md:pl-0 pr-5  ">
             <input type="checkbox" name="" id="" className="" />
           </div>
@@ -50,7 +50,7 @@ const Checkout = () => {
       </div>
       {/*  */}
 
-      <div className="max-w-[1620px] mx-auto flex flex-col items-center gap-5  py-5 ">
+      <div className="max-w-[1620px] mx-auto flex flex-col items-center gap-3.75 py-5  ">
         <CheckoutCard />
         <CheckoutCard />
         <CheckoutCard />
