@@ -1,6 +1,5 @@
 import {
   brandIcon,
-  Checkout1,
   Detail1,
   Detail2,
   Detail3,
@@ -21,6 +20,8 @@ import { useRef } from "react";
 import DeliveryStep from "../../../utils/DeliveryStep";
 import InstagramFeed from "../../../utils/InstagramFeed";
 
+import "../styles/Checkout.css";
+
 const Checkout = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
@@ -30,9 +31,13 @@ const Checkout = () => {
     <section className="w-full  bg-[#F3F3F3] pt-15 ">
       <div className="max-w-[1620px] mx-auto flex items-center justify-between bg-white py-3.5 ">
         <div className="w-full lg:w-1/2 flex items-center ">
-          <div className="md:w-[93px] 2xl:w-28.75 flex items-center justify-end pl-3 md:pl-0 pr-5  ">
-            <input type="checkbox" name="" id="" className="" />
+          <div className="md:w-[93px] 2xl:w-28.75 flex items-center justify-end pr-5  ">
+            <label className="custom_checkbox">
+              <input type="checkbox" />
+              <span className="checkmark"></span>
+            </label>
           </div>
+
           <div className=" flex items-center gap-31 md:gap-61.5 lg:gap-53.25 ">
             <h3 className="text-18 text-[#ADADAD] ">All</h3>
             <h3 className="text-18 text-[#ADADAD]">Product Name</h3>

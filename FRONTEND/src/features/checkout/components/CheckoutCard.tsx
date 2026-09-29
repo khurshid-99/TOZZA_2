@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Checkout1, CloseIcon } from "../../../images";
 
+import "../styles/Checkout.css"
+
 const CheckoutCard = () => {
   const [count, setCount] = useState(1);
   const [price, setPrice] = useState(309);
@@ -8,7 +10,10 @@ const CheckoutCard = () => {
     <div className="w-full 3xl:w-[1620px] aspect-1620/250 flex flex-col lg:flex-row lg:items-center lg:justify-between py-3.5 gap-4 lg:gap-0 bg-white">
       <div className="w-full lg:w-1/2 h-full flex items-center">
         <div className=" w-[50px] md:w-28.75 flex h-full items-start justify-end pr-5 pt-4  ">
-          <input type="checkbox" name="" id="" className="" />
+          <label className="custom_checkbox">
+            <input type="checkbox" />
+            <span className="checkmark"></span>
+          </label>
         </div>
         <div className="w-full md:w-[695px] flex md:px-5 py-2 md:py-0  ">
           <div className="rounded-[10px] overflow-hidden">

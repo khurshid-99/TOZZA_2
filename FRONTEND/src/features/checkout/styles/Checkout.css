@@ -1,0 +1,44 @@
+.custom_checkbox {
+  position: relative;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.custom_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ff9f1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* White check */
+.checkmark::after {
+  content: "";
+  width: 7px;
+  height: 13px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+
+/* Unchecked state */
+.custom_checkbox input:not(:checked) + .checkmark {
+  background: #fff;
+  border: 2px solid #d9d9d9;
+}
+
+.custom_checkbox input:not(:checked) + .checkmark::after {
+  display: none;
+}
